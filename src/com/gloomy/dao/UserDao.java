@@ -3,10 +3,7 @@ package com.gloomy.dao;
 import com.gloomy.entity.User;
 import com.gloomy.util.PersistenceManager;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Query;
+import javax.persistence.*;
 
 public class UserDao {
 
@@ -94,7 +91,11 @@ public class UserDao {
             Query query = entityManager.createQuery("SELECT u FROM User AS u WHERE u.username = :username AND u.password = :password");
             query.setParameter("username", username);
             query.setParameter("password", passwprd);
-            u = (User) query.getSingleResult();
+            try {
+                u = (User) query.getSingleResult();
+            } catch (NoResultException e) {
+                u = null;
+            }
             entityTransaction.commit();
         } finally {
             if (entityTransaction.isActive()) {

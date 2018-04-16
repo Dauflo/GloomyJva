@@ -47,7 +47,7 @@ public class Login extends HttpServlet {
                 HttpSession session = req.getSession();
                 session.setAttribute("user", u);
                 System.out.println("Login OK");
-                resp.sendRedirect(Register.URL_PATH);
+                resp.sendRedirect(Main.URL_PATH);
             } else {
                 System.out.println("Fail to login");
                 resp.sendRedirect(Login.URL_PATH);

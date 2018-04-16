@@ -42,8 +42,8 @@ public class Register extends HttpServlet {
 
         //Check if the fields are empty
         //TODO keep good field
-        if (fName == null || fName.trim().isEmpty() || lName == null || lName.trim().isEmpty() || username == null || username.trim().isEmpty()
-                || password == null || password.trim().isEmpty() || email == null || email.trim().isEmpty()) {
+        if (fName.trim().isEmpty() || lName.trim().isEmpty() || username.trim().isEmpty()
+                || password.trim().isEmpty() || email.trim().isEmpty()) {
             resp.sendRedirect(Register.URL_PATH);
         } else {
             //!userDAO.existeUsername(username)
