@@ -22,7 +22,8 @@
     Email :<br>
     <input type="email" name="email" value="<c:out value="${user.getEmail()}"></c:out>" required>
     <br><br>
-    <input type="submit" value="Register">
+    <input type="submit" value="Update">
 </form>
+<a href="/auth/updatepassword">Update Password</a>
 </body>
 </html>

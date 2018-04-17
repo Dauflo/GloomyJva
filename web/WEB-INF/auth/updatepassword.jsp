@@ -1,24 +1,25 @@
 <%--
   Created by IntelliJ IDEA.
   User: alois
-  Date: 16/04/2018
-  Time: 10:09
+  Date: 17/04/2018
+  Time: 15:36
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Login</title>
+    <title>Gloomy</title>
 </head>
 <body>
-<form method="post" action="login">
-    Username:<br>
-    <input type="text" name="username" required>
-    <br>
-    Password:<br>
+<form method="post" action="/auth/updatepassword">
+    Password :<br>
     <input type="password" name="password" required>
+    <br>
+    Confirmation :<br>
+    <input type="password" name="confirmation" required>
     <br><br>
-    <input type="submit" value="Login">
+    <input type="submit" value="Update">
 </form>
+<a href="/auth/main">Main</a>
 </body>
 </html>
