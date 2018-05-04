@@ -2,10 +2,12 @@ package com.gloomy.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "user")
-public class User implements Serializable {
+public class User  implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -26,8 +28,16 @@ public class User implements Serializable {
     @Column(nullable = false)
     private String password;
 
-    public User() {
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "user_file",
+            joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "file_id", referencedColumnName = "id", unique = true)
+    )
+    private List<FileUser> fileUserList;
 
+    public User() {
+        fileUserList = new ArrayList<FileUser>();
     }
 
     public long getId() {
@@ -76,5 +86,17 @@ public class User implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public List<FileUser> getFileUserList() {
+        return fileUserList;
+    }
+
+    public void setFileUserList(List<FileUser> fileUserList) {
+        this.fileUserList = fileUserList;
+    }
+
+    public void addFileUserList(FileUser fileUser) {
+        this.fileUserList.add(fileUser);
     }
 }
