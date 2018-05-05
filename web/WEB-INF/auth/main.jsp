@@ -30,7 +30,7 @@
                 <td>
                     <form method="get" action="/auth/downloadfile">
                         <input type="hidden" value="${file.getId()}" name="id"/>
-                        <input type="submit" value="Get file"/>
+                        <input type="submit" value="Download"/>
                     </form>
                 </td>
             </tr>
