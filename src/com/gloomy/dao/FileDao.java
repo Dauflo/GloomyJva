@@ -33,16 +33,17 @@ public class FileDao {
     }
 
     //Persist
-    public void persist(String fileName, InputStream is, Long user_id) throws SQLException {
+    public void persist(String fileName, InputStream is, long size, long user_id) throws SQLException {
         connection.setAutoCommit(false);
         try {
-            String sql = "Insert into file(name,filePart, user_id) " //
-                    + " values (?,?,?) ";
+            String sql = "Insert into file(name,filePart,size,user_id) " //
+                    + " values (?,?,?,?) ";
             PreparedStatement pstm = connection.prepareStatement(sql);
 
             pstm.setString(1, fileName);
             pstm.setBlob(2, is);
-            pstm.setLong(3, user_id);
+            pstm.setLong(3, size);
+            pstm.setLong(4, user_id);
             pstm.executeUpdate();
             connection.commit();
 
@@ -67,10 +68,11 @@ public class FileDao {
                 // gets file name and file blob data
                 String fileName = result.getString("name");
                 Blob blob = result.getBlob("filePart");
-
+                long size = result.getLong("size");
                 fileUser.setId(id);
                 fileUser.setName(fileName);
                 fileUser.setFilePart(blob);
+                fileUser.setSize(size);
             } else {
                 // no file found
                 return null;

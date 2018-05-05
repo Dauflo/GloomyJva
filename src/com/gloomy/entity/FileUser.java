@@ -15,6 +15,9 @@ public class FileUser {
     private String name;
 
     @Column(nullable = false)
+    private long size;
+
+    @Column(nullable = false)
     @Lob
     private Blob filePart;
 
@@ -57,5 +60,13 @@ public class FileUser {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public long getSize() {
+        return size;
+    }
+
+    public void setSize(long size) {
+        this.size = size;
     }
 }

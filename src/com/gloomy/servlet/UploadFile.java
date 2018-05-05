@@ -16,12 +16,10 @@ import java.sql.SQLException;
 @MultipartConfig(maxFileSize = 16177215)
 public class UploadFile extends HttpServlet {
     public static final String URL_PATH = "/auth/uploadfile";
-    private FileDao fileDao;
     private UserDao userDao;
 
     @Override
     public void init() throws ServletException {
-        fileDao = new FileDao();
         userDao = new UserDao();
     }
 
@@ -34,14 +32,16 @@ public class UploadFile extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Part part = req.getPart("file");
         String fileName = extractFileName(part);
+        long size = part.getSize();
         if (fileName != null && fileName.length() > 0) {
             // File data
             InputStream is = part.getInputStream();
             // Write to file
             try {
+                FileDao fileDao = new FileDao();
                 HttpSession session = req.getSession();
                 User currentUser = (User) session.getAttribute("user");
-                fileDao.persist(fileName, is, currentUser.getId());
+                fileDao.persist(fileName, is, size, currentUser.getId());
             } catch (SQLException e) {
                 e.printStackTrace();
             }
