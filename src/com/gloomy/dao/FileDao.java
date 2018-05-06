@@ -1,5 +1,6 @@
 package com.gloomy.dao;
 
+import com.gloomy.entity.Directory;
 import com.gloomy.entity.FileUser;
 import com.gloomy.entity.User;
 import com.gloomy.util.PersistenceManager;
@@ -123,21 +124,42 @@ public class FileDao {
 
 
     //Give 10 first
-    public List<FileUser> getFileUserList(User user_id) {
+    public List<FileUser> getFileUserList(User user) {
         List<FileUser> fileUserList = new ArrayList<FileUser>();
-        EntityManager em = gloomy_emf.createEntityManager();
-        EntityTransaction et = em.getTransaction();
+        EntityManager entityManager = gloomy_emf.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
         try {
-            et.begin();
-            Query query = em.createQuery("SELECT f FROM FileUser AS f WHERE f.user = :user_id ORDER BY f.id");
-            query.setParameter("user_id", user_id);
+            entityTransaction.begin();
+            Query query = entityManager.createQuery("SELECT f FROM FileUser AS f WHERE f.user = :user AND f.directory IS NULL ORDER BY f.id");
+            query.setParameter("user", user);
             fileUserList = query.getResultList();
-            et.commit();
+            entityTransaction.commit();
         } finally {
-            if (et.isActive()) {
-                et.rollback();
+            if (entityTransaction.isActive()) {
+                entityTransaction.rollback();
             }
-            em.close();
+            entityManager.close();
+        }
+        return fileUserList;
+    }
+
+    //Get file from dir
+    public List<FileUser> getFileFromDir(User user, Directory directory) {
+        List<FileUser> fileUserList = new ArrayList<FileUser>();
+        EntityManager entityManager = gloomy_emf.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        try {
+            entityTransaction.begin();
+            Query query = entityManager.createQuery("SELECT f FROM FileUser AS f WHERE f.user = :user AND f.directory = :directory ORDER BY f.id");
+            query.setParameter("user", user);
+            query.setParameter("directory", directory);
+            fileUserList = query.getResultList();
+            entityTransaction.commit();
+        } finally {
+            if(entityTransaction.isActive()) {
+                entityTransaction.rollback();
+            }
+            entityManager.close();
         }
         return fileUserList;
     }
