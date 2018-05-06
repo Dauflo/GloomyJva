@@ -55,6 +55,12 @@
         <c:forEach items="${directories}" var="directory">
             <tr>
                 <td><c:out value="${directory.getName()}"/></td>
+                <td>
+                    <form method="post" action="/auth/directorydetail">
+                        <input type="hidden" value="${directory.getId()}" name="id">
+                        <input type="submit" value="See">
+                    </form>
+                </td>
             </tr>
         </c:forEach>
     </table>
