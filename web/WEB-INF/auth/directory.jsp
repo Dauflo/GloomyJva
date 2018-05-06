@@ -27,6 +27,12 @@
                 </td>
             </tr>
         </c:forEach>
-    </table>
+    </table><br>
+    <form method="post" action="/auth/updatedirectoryname">
+        <input type="hidden" value="${directory.getId()}" name="directoryId"/>
+        New name:<br>
+        <input type="text" name="name" required/><br>
+        <input type="submit" value="Update Name"/>
+    </form>
 </body>
 </html>
