@@ -32,7 +32,7 @@ public class FileDao {
         }
     }
 
-    //Persist
+    //Persist no dir
     public void persist(String fileName, InputStream is, long size, long user_id) throws SQLException {
         connection.setAutoCommit(false);
         try {
@@ -44,6 +44,29 @@ public class FileDao {
             pstm.setBlob(2, is);
             pstm.setLong(3, size);
             pstm.setLong(4, user_id);
+            pstm.executeUpdate();
+            connection.commit();
+
+        } finally {
+            if (connection != null) {
+                connection.close();
+            }
+        }
+    }
+
+    //Persist with dir
+    public void persist(String fileName, InputStream is, long size, long user_id, long directory_id) throws SQLException {
+        connection.setAutoCommit(false);
+        try {
+            String sql = "Insert into file(name,filePart,size,user_id,directory_id) " //
+                    + " values (?,?,?,?,?) ";
+            PreparedStatement pstm = connection.prepareStatement(sql);
+
+            pstm.setString(1, fileName);
+            pstm.setBlob(2, is);
+            pstm.setLong(3, size);
+            pstm.setLong(4, user_id);
+            pstm.setLong(5, directory_id);
             pstm.executeUpdate();
             connection.commit();
 

@@ -26,6 +26,10 @@ public class FileUser {
     @JoinColumn(name = "user_id")
     private User user;
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "directory_id")
+    private Directory directory;
+
     public FileUser() {
 
     }
@@ -68,5 +72,13 @@ public class FileUser {
 
     public void setSize(long size) {
         this.size = size;
+    }
+
+    public Directory getDirectory() {
+        return directory;
+    }
+
+    public void setDirectory(Directory directory) {
+        this.directory = directory;
     }
 }

@@ -1,7 +1,9 @@
 package com.gloomy.servlet;
 
+import com.gloomy.dao.DirectoryDao;
 import com.gloomy.dao.FileDao;
 import com.gloomy.dao.UserDao;
+import com.gloomy.entity.Directory;
 import com.gloomy.entity.User;
 
 import javax.servlet.ServletException;
@@ -17,10 +19,13 @@ import java.sql.SQLException;
 public class UploadFile extends HttpServlet {
     public static final String URL_PATH = "/auth/uploadfile";
     private UserDao userDao;
+    private DirectoryDao directoryDao;
 
     @Override
     public void init() throws ServletException {
         userDao = new UserDao();
+        directoryDao = new DirectoryDao();
+
     }
 
     @Override
@@ -33,6 +38,9 @@ public class UploadFile extends HttpServlet {
         Part part = req.getPart("file");
         String fileName = extractFileName(part);
         long size = part.getSize();
+
+        long directoryId = Long.parseLong(req.getParameter("category"));
+
         if (fileName != null && fileName.length() > 0) {
             // File data
             InputStream is = part.getInputStream();
@@ -41,7 +49,12 @@ public class UploadFile extends HttpServlet {
                 FileDao fileDao = new FileDao();
                 HttpSession session = req.getSession();
                 User currentUser = (User) session.getAttribute("user");
-                fileDao.persist(fileName, is, size, currentUser.getId());
+                if (directoryId != 0) {
+                    Directory directory = directoryDao.getDirectoryById(directoryId);
+                    fileDao.persist(fileName, is, size, currentUser.getId(), directory.getId());
+                } else {
+                    fileDao.persist(fileName, is, size, currentUser.getId());
+                }
             } catch (SQLException e) {
                 e.printStackTrace();
             }

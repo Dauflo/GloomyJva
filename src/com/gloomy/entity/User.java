@@ -36,6 +36,22 @@ public class User  implements Serializable {
     )
     private List<FileUser> fileUserList;
 
+    @OneToMany
+    @JoinTable(
+            name = "user_directory",
+            joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "directory_id", referencedColumnName = "id", unique = true)
+    )
+    private List<Directory> directoryList;
+
+    public List<Directory> getDirectoryList() {
+        return directoryList;
+    }
+
+    public void setDirectoryList(List<Directory> directoryList) {
+        this.directoryList = directoryList;
+    }
+
     public User() {
         fileUserList = new ArrayList<FileUser>();
     }

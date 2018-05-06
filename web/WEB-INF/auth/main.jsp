@@ -14,14 +14,28 @@
 <body>
 <div>
     Main page<br><br>
+    <%-- UPLOAD FILE --%>
     <form method="post" action="/auth/uploadfile" enctype="multipart/form-data">
         My file<br>
         <input type="file" name="file" size="50">
-        <br><br>
+        <br>
+        <select name="category">
+            <option value="0">No directory</option>
+            <c:forEach items="${directories}" var="directory">
+                <option value="${directory.getId()}"><c:out value="${directory.getName()}"/></option>
+            </c:forEach>
+        </select><br>
         <input type="submit" value="Upload">
+    </form>
+    <form method="post" action="/auth/addDirectory">
+        Directory:<br>
+        <input type="text" name="directory" required>
+        <br><br>
+        <input type="submit" value="Add directory">
     </form>
     <a href="/logout">Logout</a>
     <a href="/auth/updateprofil">Update Profil</a><br>
+    <%-- DISPLAY FILE --%>
     <table>
         <c:forEach items="${files}" var="file">
             <tr>
@@ -33,6 +47,14 @@
                         <input type="submit" value="Download"/>
                     </form>
                 </td>
+            </tr>
+        </c:forEach>
+    </table><br>
+    <%-- DISPLAY DIRECTORY --%>
+    <table>
+        <c:forEach items="${directories}" var="directory">
+            <tr>
+                <td><c:out value="${directory.getName()}"/></td>
             </tr>
         </c:forEach>
     </table>
