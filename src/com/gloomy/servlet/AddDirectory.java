@@ -31,6 +31,7 @@ public class AddDirectory extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String directoryName = req.getParameter("directory");
+        long rootDirId = Long.parseLong(req.getParameter("rootDirId"));
 
         if (directoryName.trim().isEmpty()) {
             resp.sendRedirect(Main.URL_PATH);
@@ -40,6 +41,7 @@ public class AddDirectory extends HttpServlet{
             Directory directory = new Directory();
             directory.setName(directoryName);
             directory.setUser(currentUser);
+            directory.setRootDirId(rootDirId);
             directoryDao.addCDirectory(directory);
 
             resp.sendRedirect(Main.URL_PATH);
