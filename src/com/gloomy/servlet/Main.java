@@ -37,7 +37,7 @@ public class Main extends HttpServlet {
         List<FileUser> fileUserList = fileDao.getFileUserList(currentUser);
         req.setAttribute("files", fileUserList);
 
-        List<Directory> directoryList = directoryDao.getAllDirectory(currentUser);
+        List<Directory> directoryList = directoryDao.getAllDirectoryRoot(currentUser);
         req.setAttribute("directories", directoryList);
 
         RequestDispatcher rd = req.getRequestDispatcher(Main.JSP_PATH);

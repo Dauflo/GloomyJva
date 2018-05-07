@@ -27,6 +27,7 @@
         </select><br>
         <input type="submit" value="Upload">
     </form>
+    <%-- ADD DIRECTORY --%>
     <form method="post" action="/auth/addDirectory">
         Directory:<br>
         <input type="text" name="directory" required>
@@ -45,6 +46,13 @@
                     <form method="get" action="/auth/downloadfile">
                         <input type="hidden" value="${file.getId()}" name="id"/>
                         <input type="submit" value="Download"/>
+                    </form>
+                </td><br>
+                <td>
+                    <form method="post" action="/auth/updatefilename">
+                        <input type="text" name="newName" required/>
+                        <input type="hidden" value="${file.getId()}" name="id"/>
+                        <input type="submit" value="Update name"/>
                     </form>
                 </td>
             </tr>
