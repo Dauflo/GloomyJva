@@ -14,6 +14,9 @@ public class Directory implements Serializable{
     @Column(nullable = false)
     private String name;
 
+    @Column(nullable = true)
+    private long rootDirId;
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private User user;
@@ -51,6 +54,14 @@ public class Directory implements Serializable{
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public long getRootDirId() {
+        return rootDirId;
+    }
+
+    public void setRootDirId(long rootDirId) {
+        this.rootDirId = rootDirId;
     }
 
     public List<FileUser> getFileUserList() {

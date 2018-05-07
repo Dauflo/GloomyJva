@@ -43,6 +43,12 @@ public class DirectoryDetail extends HttpServlet{
 
         req.setAttribute("files", fileUserList);
 
+        if (directory.getId() != 0) {
+            List<Directory> directoryList = directoryDao.getAllSubDirectory(currentUser, directory.getId());
+
+            req.setAttribute("directories", directoryList);
+        }
+
         RequestDispatcher rd = req.getRequestDispatcher(DirectoryDetail.JSP_PATH);
         rd.forward(req, resp);
     }

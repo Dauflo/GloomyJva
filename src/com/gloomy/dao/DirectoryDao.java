@@ -8,7 +8,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
-import java.util.ArrayList;
 import java.util.List;
 
 public class DirectoryDao {
@@ -87,15 +86,36 @@ public class DirectoryDao {
         return true;
     }
 
-    //Get all dir
-    public List<Directory> getAllDirectory(User user) {
-        List<Directory> directoryList = new ArrayList<Directory>();
+    //Get all root dir
+    public List<Directory> getAllDirectoryRoot(User user) {
+        List<Directory> directoryList;
         EntityManager entityManager = gloomy_emf.createEntityManager();
         EntityTransaction entityTransaction = entityManager.getTransaction();
         try {
             entityTransaction.begin();
-            Query query = entityManager.createQuery("SELECT d FROM Directory AS d WHERE d.user = :user ORDER BY d.id");
+            Query query = entityManager.createQuery("SELECT d FROM Directory AS d WHERE d.user = :user AND d.rootDirId = 0 ORDER BY d.id");
             query.setParameter("user", user);
+            directoryList = query.getResultList();
+            entityTransaction.commit();
+        } finally {
+            if (entityTransaction.isActive()) {
+                entityTransaction.rollback();
+            }
+            entityManager.close();
+        }
+        return directoryList;
+    }
+
+    //Get all sub dir
+    public List<Directory> getAllSubDirectory(User user, long dirId) {
+        List<Directory> directoryList;
+        EntityManager entityManager = gloomy_emf.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        try {
+            entityTransaction.begin();
+            Query query = entityManager.createQuery("SELECT d FROM Directory AS d WHERE d.user = :user AND d.rootDirId = :rootDirId ORDER BY d.id");
+            query.setParameter("user", user);
+            query.setParameter("rootDirId", dirId);
             directoryList = query.getResultList();
             entityTransaction.commit();
         } finally {
