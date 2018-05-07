@@ -4,14 +4,18 @@ import com.gloomy.dao.DirectoryDao;
 import com.gloomy.dao.FileDao;
 import com.gloomy.dao.UserDao;
 import com.gloomy.entity.Directory;
+import com.gloomy.entity.FileUser;
 import com.gloomy.entity.User;
+import org.apache.commons.io.IOUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
+import javax.sql.rowset.serial.SerialBlob;
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.Blob;
 import java.sql.SQLException;
 
 @WebServlet(urlPatterns = UploadFile.URL_PATH)
@@ -44,20 +48,29 @@ public class UploadFile extends HttpServlet {
         if (fileName != null && fileName.length() > 0) {
             // File data
             InputStream is = part.getInputStream();
-            // Write to file
+
+            Blob blob = null;
             try {
-                FileDao fileDao = new FileDao();
-                HttpSession session = req.getSession();
-                User currentUser = (User) session.getAttribute("user");
-                if (directoryId != 0) {
-                    Directory directory = directoryDao.getDirectoryById(directoryId);
-                    fileDao.persist(fileName, is, size, currentUser.getId(), directory.getId());
-                } else {
-                    fileDao.persist(fileName, is, size, currentUser.getId());
-                }
+                blob = new SerialBlob(IOUtils.toByteArray(is));
             } catch (SQLException e) {
                 e.printStackTrace();
             }
+            // Write to file
+            FileDao fileDao = new FileDao();
+            HttpSession session = req.getSession();
+            User currentUser = (User) session.getAttribute("user");
+
+            FileUser fileUser = new FileUser();
+            fileUser.setName(fileName);
+            fileUser.setFilePart(blob);
+            fileUser.setSize(size);
+            fileUser.setUser(currentUser);
+
+            if (directoryId != 0) {
+                Directory directory = directoryDao.getDirectoryById(directoryId);
+                fileUser.setDirectory(directory);
+            }
+            fileDao.persist(fileUser);
         }
 
 
@@ -65,19 +78,13 @@ public class UploadFile extends HttpServlet {
     }
 
     private String extractFileName(Part part) {
-        // form-data; name="file"; filename="C:\file1.zip"
-        // form-data; name="file"; filename="C:\Note\file2.zip"
         String contentDisp = part.getHeader("content-disposition");
         String[] items = contentDisp.split(";");
         for (String s : items) {
             if (s.trim().startsWith("filename")) {
-                // C:\file1.zip
-                // C:\Note\file2.zip
                 String clientFileName = s.substring(s.indexOf("=") + 2, s.length() - 1);
                 clientFileName = clientFileName.replace("\\", "/");
                 int i = clientFileName.lastIndexOf('/');
-                // file1.zip
-                // file2.zip
                 return clientFileName.substring(i + 1);
             }
         }

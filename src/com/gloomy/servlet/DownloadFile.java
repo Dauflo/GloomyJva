@@ -32,7 +32,7 @@ public class DownloadFile extends HttpServlet {
         long id = Long.parseLong(req.getParameter("id"));
 
         try {
-            FileUser fileUser = fileDao.read(id);
+            FileUser fileUser = fileDao.readById(id);
             InputStream inputStream = fileUser.getFilePart().getBinaryStream();
             int fileLength = inputStream.available();
 

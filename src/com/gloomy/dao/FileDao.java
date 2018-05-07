@@ -9,116 +9,67 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
-import java.io.InputStream;
-import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+//TODO interface
 public class FileDao {
     private final EntityManagerFactory gloomy_emf;
-    private Connection connection;
-
-    private final String JDDC_DRIVER = "com.mysql.jdbc.Driver";
-    private final String DB_URL = "jdbc:mysql://localhost/gloomydb";
-    private final String USER = "root";
-    private final String PASS = "";
 
     public FileDao() {
         gloomy_emf = PersistenceManager.getEntityManagerFactory();
-        try {
-            DriverManager.registerDriver(new com.mysql.jdbc.Driver());
-            connection = DriverManager.getConnection(DB_URL, USER, PASS);
-        } catch (Exception e) {
-
-        }
     }
 
-    //Persist no dir
-    public void persist(String fileName, InputStream is, long size, long user_id) throws SQLException {
-        connection.setAutoCommit(false);
+    //Persist
+    public void persist(FileUser fileUser) {
+        EntityManager entityManager = gloomy_emf.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
         try {
-            String sql = "Insert into file(name,filePart,size,user_id) " //
-                    + " values (?,?,?,?) ";
-            PreparedStatement pstm = connection.prepareStatement(sql);
-
-            pstm.setString(1, fileName);
-            pstm.setBlob(2, is);
-            pstm.setLong(3, size);
-            pstm.setLong(4, user_id);
-            pstm.executeUpdate();
-            connection.commit();
-
+            entityTransaction.begin();
+            entityManager.persist(fileUser);
+            entityTransaction.commit();
         } finally {
-            if (connection != null) {
-                connection.close();
+            if (entityTransaction.isActive()) {
+                entityTransaction.rollback();
             }
-        }
-    }
-
-    //Persist with dir
-    public void persist(String fileName, InputStream is, long size, long user_id, long directory_id) throws SQLException {
-        connection.setAutoCommit(false);
-        try {
-            String sql = "Insert into file(name,filePart,size,user_id,directory_id) " //
-                    + " values (?,?,?,?,?) ";
-            PreparedStatement pstm = connection.prepareStatement(sql);
-
-            pstm.setString(1, fileName);
-            pstm.setBlob(2, is);
-            pstm.setLong(3, size);
-            pstm.setLong(4, user_id);
-            pstm.setLong(5, directory_id);
-            pstm.executeUpdate();
-            connection.commit();
-
-        } finally {
-            if (connection != null) {
-                connection.close();
-            }
+            entityManager.close();
         }
     }
 
     //Read
-    public FileUser read(long id) throws SQLException {
-        FileUser fileUser = new FileUser();
+    public FileUser readById(long id) {
+        EntityManager entityManager = gloomy_emf.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        FileUser fileUser;
         try {
-            // queries the database
-            String sql = "SELECT * FROM file WHERE id = ?";
-            PreparedStatement statement = connection.prepareStatement(sql);
-            statement.setLong(1, id);
-
-            ResultSet result = statement.executeQuery();
-            if (result.next()) {
-                // gets file name and file blob data
-                String fileName = result.getString("name");
-                Blob blob = result.getBlob("filePart");
-                long size = result.getLong("size");
-                fileUser.setId(id);
-                fileUser.setName(fileName);
-                fileUser.setFilePart(blob);
-                fileUser.setSize(size);
-            } else {
-                // no file found
-                return null;
-            }
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+            entityTransaction.begin();
+            fileUser = entityManager.find(FileUser.class, id);
+            entityTransaction.commit();
         } finally {
-            if (connection != null) {
-                // closes the database connection
-                try {
-                    connection.close();
-                    return fileUser;
-                } catch (SQLException ex) {
-                    ex.printStackTrace();
-                }
+            if (entityTransaction.isActive()) {
+                entityTransaction.rollback();
             }
+            entityManager.close();
         }
-        return null;
+        return fileUser;
     }
 
     //Update
-
+    public boolean updateNameFile(FileUser fileUser) {
+        EntityManager entityManager = gloomy_emf.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        try {
+            entityTransaction.begin();
+            entityManager.merge(fileUser);
+            entityTransaction.commit();
+        } finally {
+            if (entityTransaction.isActive()) {
+                entityTransaction.rollback();
+            }
+            entityManager.close();
+        }
+        return true;
+    }
 
     //Delete
 
