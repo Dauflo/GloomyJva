@@ -18,7 +18,7 @@
     Password:<br>
     <input type="password" name="password" required>
     <br><br>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Login">
 </form>
 </body>
 </html>
