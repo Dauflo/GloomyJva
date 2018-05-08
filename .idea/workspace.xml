@@ -8,22 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8a45b4ef-1d63-43bc-b146-4e608a3e70ec" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/com/gloomy/dao/UserDao.class" afterPath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/com/gloomy/dao/UserDao.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/com/gloomy/entity/User.class" afterPath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/com/gloomy/entity/User.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/com/gloomy/servlet/Login.class" afterPath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/com/gloomy/servlet/Login.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/com/gloomy/servlet/Register.class" afterPath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/com/gloomy/servlet/Register.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/login.jsp" afterPath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/login.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/dao/UserDao.class" afterPath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/dao/UserDao.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/entity/User.class" afterPath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/entity/User.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/servlet/Login.class" afterPath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/servlet/Login.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/servlet/Register.class" afterPath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/servlet/Register.class" />
-      <change beforePath="$PROJECT_DIR$/src/com/gloomy/dao/DirectoryDao.java" afterPath="$PROJECT_DIR$/src/com/gloomy/dao/DirectoryDao.java" />
       <change beforePath="$PROJECT_DIR$/src/com/gloomy/dao/FileDao.java" afterPath="$PROJECT_DIR$/src/com/gloomy/dao/FileDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/gloomy/entity/Directory.java" afterPath="$PROJECT_DIR$/src/com/gloomy/entity/Directory.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/gloomy/servlet/AddDirectory.java" afterPath="$PROJECT_DIR$/src/com/gloomy/servlet/AddDirectory.java" />
       <change beforePath="$PROJECT_DIR$/src/com/gloomy/servlet/DirectoryDetail.java" afterPath="$PROJECT_DIR$/src/com/gloomy/servlet/DirectoryDetail.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/gloomy/servlet/DownloadFile.java" afterPath="$PROJECT_DIR$/src/com/gloomy/servlet/DownloadFile.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/gloomy/servlet/Main.java" afterPath="$PROJECT_DIR$/src/com/gloomy/servlet/Main.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/gloomy/servlet/UpdateDirectoryName.java" afterPath="$PROJECT_DIR$/src/com/gloomy/servlet/UpdateDirectoryName.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/gloomy/servlet/UpdateFileName.java" afterPath="$PROJECT_DIR$/src/com/gloomy/servlet/UpdateFileName.java" />
       <change beforePath="$PROJECT_DIR$/src/com/gloomy/servlet/UploadFile.java" afterPath="$PROJECT_DIR$/src/com/gloomy/servlet/UploadFile.java" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/auth/directory.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/auth/directory.jsp" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/auth/main.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/auth/main.jsp" />
@@ -52,59 +40,38 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Directory.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/gloomy/entity/Directory.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="method#Directory#0;class#Directory#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="FileDao.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/gloomy/dao/FileDao.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="24" column="12" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+                <state relative-caret-position="79">
+                  <caret line="80" column="39" lean-forward="true" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
                   <folding>
                     <element signature="e#499#500#0" expanded="true" />
                     <element signature="e#572#573#0" expanded="true" />
-                    <element signature="e#2387#2397#0" expanded="true" />
-                    <element signature="e#3242#3252#0" expanded="true" />
+                    <element signature="e#2945#2955#0" expanded="true" />
+                    <element signature="e#3800#3810#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="DownloadFile.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/DownloadFile.java">
+          <file leaf-file-name="UploadFile.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/UploadFile.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="35" column="49" lean-forward="false" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
-                  <folding />
+                <state relative-caret-position="450">
+                  <caret line="82" column="56" lean-forward="true" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="56" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="directory.jsp" pinned="false" current-in-tab="true">
+          <file leaf-file-name="directory.jsp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/web/WEB-INF/auth/directory.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
-                  <caret line="55" column="8" lean-forward="false" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="main.jsp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/WEB-INF/auth/main.jsp">
-              <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="389">
-                  <caret line="73" column="12" lean-forward="true" selection-start-line="60" selection-start-column="4" selection-end-line="73" selection-end-column="12" />
+                  <caret line="54" column="92" lean-forward="false" selection-start-line="54" selection-start-column="80" selection-end-line="54" selection-end-column="92" />
                   <folding />
                 </state>
               </provider>
@@ -114,31 +81,21 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="UploadFile.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/UploadFile.java">
+          <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/gloomy/dao/UserDao.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1156">
-                  <caret line="87" column="55" lean-forward="true" selection-start-line="87" selection-start-column="55" selection-end-line="87" selection-end-column="55" />
+                <state relative-caret-position="134">
+                  <caret line="74" column="19" lean-forward="false" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="DirectoryDao.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/gloomy/dao/DirectoryDao.java">
+          <file leaf-file-name="DeleteFile.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/DeleteFile.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1377">
-                  <caret line="91" column="38" lean-forward="false" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AddDirectory.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/AddDirectory.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="403">
-                  <caret line="44" column="44" lean-forward="false" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="44" />
+                <state relative-caret-position="671">
+                  <caret line="41" column="31" lean-forward="true" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -146,36 +103,12 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/Main.java">
+          <file leaf-file-name="main.jsp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/WEB-INF/auth/main.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="33" column="47" lean-forward="true" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+                <state relative-caret-position="357">
+                  <caret line="60" column="20" lean-forward="true" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
                   <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="DirectoryDetail.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/DirectoryDetail.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="372">
-                  <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="UpdateDirectoryName.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/UpdateDirectoryName.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="359">
-                  <caret line="32" column="55" lean-forward="false" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -223,18 +156,19 @@
         <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/com/gloomy/entity/User.java" />
         <option value="$PROJECT_DIR$/src/com/gloomy/entity/FileUser.java" />
-        <option value="$PROJECT_DIR$/src/com/gloomy/servlet/UpdateDirectoryName.java" />
         <option value="$PROJECT_DIR$/src/com/gloomy/servlet/DownloadFile.java" />
-        <option value="$PROJECT_DIR$/src/com/gloomy/servlet/UploadFile.java" />
-        <option value="$PROJECT_DIR$/src/com/gloomy/servlet/UpdateFileName.java" />
-        <option value="$PROJECT_DIR$/src/com/gloomy/dao/FileDao.java" />
         <option value="$PROJECT_DIR$/src/com/gloomy/entity/Directory.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/auth/main.jsp" />
         <option value="$PROJECT_DIR$/src/com/gloomy/servlet/AddDirectory.java" />
         <option value="$PROJECT_DIR$/src/com/gloomy/servlet/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/gloomy/servlet/DirectoryDetail.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/auth/directory.jsp" />
         <option value="$PROJECT_DIR$/src/com/gloomy/dao/DirectoryDao.java" />
+        <option value="$PROJECT_DIR$/src/com/gloomy/servlet/UploadFile.java" />
+        <option value="$PROJECT_DIR$/src/com/gloomy/servlet/UpdateFileName.java" />
+        <option value="$PROJECT_DIR$/src/com/gloomy/servlet/DirectoryDetail.java" />
+        <option value="$PROJECT_DIR$/src/com/gloomy/servlet/UpdateDirectoryName.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/auth/main.jsp" />
+        <option value="$PROJECT_DIR$/src/com/gloomy/dao/FileDao.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/auth/directory.jsp" />
+        <option value="$PROJECT_DIR$/src/com/gloomy/servlet/DeleteFile.java" />
       </list>
     </option>
   </component>
@@ -562,12 +496,12 @@
       <workItem from="1525512923782" duration="1537000" />
       <workItem from="1525518915381" duration="3063000" />
       <workItem from="1525549186770" duration="200000" />
-      <workItem from="1525597171228" duration="19970000" />
+      <workItem from="1525597171228" duration="24725000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64211000" />
+    <option name="totallyTimeSpent" value="68966000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -628,14 +562,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/UploadFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -697,8 +623,8 @@
           <folding>
             <element signature="e#499#500#0" expanded="true" />
             <element signature="e#572#573#0" expanded="true" />
-            <element signature="e#2387#2397#0" expanded="true" />
-            <element signature="e#3242#3252#0" expanded="true" />
+            <element signature="e#2945#2955#0" expanded="true" />
+            <element signature="e#3800#3810#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -793,7 +719,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -896,14 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gloomy/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="74" column="19" lean-forward="false" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gloomy/entity/FileUser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -950,60 +870,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/DownloadFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="35" column="49" lean-forward="false" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/UpdateDirectoryName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="32" column="55" lean-forward="false" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/UpdateFileName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="678">
-          <caret line="41" column="47" lean-forward="false" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/UploadFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="87" column="55" lean-forward="true" selection-start-line="87" selection-start-column="55" selection-end-line="87" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/Register.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="43" column="10" lean-forward="false" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gloomy/dao/FileDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="24" column="12" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-          <folding>
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#572#573#0" expanded="true" />
-            <element signature="e#2387#2397#0" expanded="true" />
-            <element signature="e#3242#3252#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1018,10 +889,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gloomy/dao/DirectoryDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-101">
+          <caret line="91" column="38" lean-forward="false" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/AddDirectory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="44" column="44" lean-forward="false" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="44" />
+        <state relative-caret-position="216">
+          <caret line="33" column="67" lean-forward="false" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1030,43 +909,104 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="33" column="47" lean-forward="true" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+        <state relative-caret-position="267">
+          <caret line="39" column="86" lean-forward="true" selection-start-line="39" selection-start-column="86" selection-end-line="39" selection-end-column="86" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/auth/main.jsp">
+    <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/UpdateFileName.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="73" column="12" lean-forward="true" selection-start-line="60" selection-start-column="4" selection-end-line="73" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/DirectoryDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+        <state relative-caret-position="189">
+          <caret line="30" column="36" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/auth/directory.jsp">
+    <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/DirectoryDetail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="55" column="8" lean-forward="false" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+        <state relative-caret-position="102">
+          <caret line="33" column="47" lean-forward="true" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/UpdateDirectoryName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="30" column="36" lean-forward="false" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gloomy/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="74" column="19" lean-forward="false" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gloomy/dao/DirectoryDao.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gloomy/dao/FileDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="91" column="38" lean-forward="false" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
+        <state relative-caret-position="79">
+          <caret line="80" column="39" lean-forward="true" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
+          <folding>
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#572#573#0" expanded="true" />
+            <element signature="e#2945#2955#0" expanded="true" />
+            <element signature="e#3800#3810#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/auth/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="60" column="20" lean-forward="true" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/DownloadFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="35" column="49" lean-forward="false" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/auth/directory.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="54" column="92" lean-forward="false" selection-start-line="54" selection-start-column="80" selection-end-line="54" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/UploadFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="82" column="56" lean-forward="true" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/DeleteFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="671">
+          <caret line="41" column="31" lean-forward="true" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
