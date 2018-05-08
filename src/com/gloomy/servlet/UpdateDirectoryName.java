@@ -27,6 +27,7 @@ public class UpdateDirectoryName extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        //TODO same than upload file
         long directoryId = Long.parseLong(req.getParameter("directoryId"));
         String newName = req.getParameter("name");
 

@@ -72,7 +72,21 @@ public class FileDao {
     }
 
     //Delete
-
+    public boolean deleteFile(FileUser fileUser) {
+        EntityManager entityManager = gloomy_emf.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        try {
+            entityTransaction.begin();
+            entityManager.remove(entityManager.merge(fileUser));
+            entityTransaction.commit();
+        } finally {
+            if (entityTransaction.isActive()) {
+                entityTransaction.rollback();
+            }
+            entityManager.close();
+        }
+        return true;
+    }
 
     //Give 10 first
     public List<FileUser> getFileUserList(User user) {

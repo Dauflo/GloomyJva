@@ -45,6 +45,8 @@ public class UploadFile extends HttpServlet {
 
         long directoryId = Long.parseLong(req.getParameter("category"));
 
+        long currentDirId = Long.parseLong(req.getParameter("currentDirID"));
+
         if (fileName != null && fileName.length() > 0) {
             // File data
             InputStream is = part.getInputStream();
@@ -73,8 +75,13 @@ public class UploadFile extends HttpServlet {
             fileDao.persist(fileUser);
         }
 
-
-        resp.sendRedirect(Main.URL_PATH);
+        if (currentDirId == 0) {
+            resp.sendRedirect(Main.URL_PATH);
+        } else {
+            HttpSession session = req.getSession();
+            session.setAttribute("currentDirId", currentDirId);
+            resp.sendRedirect(DirectoryDetail.URL_PATH);
+        }
     }
 
     private String extractFileName(Part part) {

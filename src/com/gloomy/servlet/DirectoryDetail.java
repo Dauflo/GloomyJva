@@ -34,7 +34,14 @@ public class DirectoryDetail extends HttpServlet{
         HttpSession session = req.getSession();
         User currentUser = (User) session.getAttribute("user");
 
-        long id = Long.parseLong(req.getParameter("id"));
+        long id;
+        try {
+           id = Long.parseLong(req.getParameter("id"));
+        } catch (NumberFormatException e) {
+            id = Long.parseLong(session.getAttribute("currentDirId").toString());
+            session.removeAttribute("currentDirId");
+        }
+
         Directory directory = directoryDao.getDirectoryById(id);
 
         req.setAttribute("directory", directory);

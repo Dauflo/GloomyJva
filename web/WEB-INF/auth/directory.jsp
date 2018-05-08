@@ -13,18 +13,49 @@
 </head>
 <body>
     <h1><c:out value="${directory.getName()}"/></h1>
+    <%-- UPLOAD FILE --%>
+    <form method="post" action="/auth/uploadfile" enctype="multipart/form-data">
+        My file<br>
+        <input type="file" name="file" size="50">
+        <br>
+        <select name="category">
+            <option value="${directory.getId()}">Current Directory</option>
+            <c:forEach items="${directories}" var="directory">
+                <option value="${directory.getId()}"><c:out value="${directory.getName()}"/></option>
+            </c:forEach>
+        </select><br>
+        <input type="hidden" value="${directory.getId()}" name="currentDirID"/>
+        <input type="submit" value="Upload">
+    </form><br>
     <%-- DISPLAY FILE --%>
     <table>
         <c:forEach items="${files}" var="file">
             <tr>
                 <td><c:out value="${file.getId()}"/></td>
                 <td><c:out value="${file.getName()}"/></td>
+                    <%-- DOWNLOAD FILE --%>
                 <td>
                     <form method="get" action="/auth/downloadfile">
                         <input type="hidden" value="${file.getId()}" name="id"/>
                         <input type="submit" value="Download"/>
                     </form>
                 </td>
+                    <%-- UPDATE FILE NAME --%>
+                <td>
+                    <form method="post" action="/auth/updatefilename">
+                        <input type="text" name="newName" required/>
+                        <input type="hidden" value="${file.getId()}" name="id"/>
+                        <input type="submit" value="Update name"/>
+                    </form>
+                </td>
+                    <%-- DELETE FILE --%>
+                <td>
+                    <form method="post" action="/auth/deletefile">
+                        <input type="hidden" value="${file.getId()}" name="id"/>
+                        <input type="hidden" value="${directory.getId()}" name="currentDirID"/>
+                        <input type="submit" value="Delete"/>
+                    </form>
+                </td><br>
             </tr>
         </c:forEach>
     </table><br>
@@ -42,12 +73,14 @@
             </tr>
         </c:forEach>
     </table><br>
+    <%-- UPDATE DIRECTORY NAME --%>
     <form method="post" action="/auth/updatedirectoryname">
         <input type="hidden" value="${directory.getId()}" name="directoryId"/>
         New name:<br>
         <input type="text" name="name" required/><br>
         <input type="submit" value="Update Name"/>
     </form><br>
+    <%-- ADD DIRECTORY --%>
     <form method="post" action="/auth/addDirectory">
         Directory:<br>
         <input type="text" name="directory" required>

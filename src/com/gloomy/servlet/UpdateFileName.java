@@ -28,6 +28,7 @@ public class UpdateFileName extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        //TODO same than upload file
         long fileId = Long.parseLong(req.getParameter("id"));
         String newName = req.getParameter("newName");
 

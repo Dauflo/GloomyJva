@@ -42,12 +42,14 @@
             <tr>
                 <td><c:out value="${file.getId()}"/></td>
                 <td><c:out value="${file.getName()}"/></td>
+                    <%-- DOWNLOAD FILE --%>
                 <td>
                     <form method="get" action="/auth/downloadfile">
                         <input type="hidden" value="${file.getId()}" name="id"/>
                         <input type="submit" value="Download"/>
                     </form>
                 </td><br>
+                    <%-- UPDATE FILE NAME --%>
                 <td>
                     <form method="post" action="/auth/updatefilename">
                         <input type="text" name="newName" required/>
@@ -55,6 +57,13 @@
                         <input type="submit" value="Update name"/>
                     </form>
                 </td>
+                    <%-- DELETE FILE --%>
+                <td>
+                    <form method="post" action="/auth/deletefile">
+                        <input type="hidden" value="${file.getId()}" name="id"/>
+                        <input type="submit" value="Delete"/>
+                    </form>
+                </td><br>
             </tr>
         </c:forEach>
     </table><br>
