@@ -15,7 +15,7 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = UpdatePassword.URL_PATH)
 public class UpdatePassword extends HttpServlet {
-    public static final String URL_PATH = "/auth/updatepassword";
+    public static final String URL_PATH = "/auth/gloomyauth/updatepassword";
     public static final String JSP_PATH = "/WEB-INF/auth/updatepassword.jsp";
     private UserDao userDao;
 

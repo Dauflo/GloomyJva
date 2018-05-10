@@ -38,7 +38,7 @@
     </form>
     <a href="/logout">Logout</a>
     <c:if test="${!user.isGoogleFacebookUser()}">
-        <a href="/auth/updateprofil">Update Profil</a><br>
+        <a href="/auth/gloomyauth/updateprofil">Update Profil</a><br>
     </c:if>
     <%-- DISPLAY FILE --%>
     <table>

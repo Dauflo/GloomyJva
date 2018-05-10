@@ -11,7 +11,7 @@
     <title>Gloomy</title>
 </head>
 <body>
-<form method="post" action="/auth/updatepassword">
+<form method="post" action="/auth/gloomyauth/updatepassword">
     Password :<br>
     <input type="password" name="password" required>
     <br>

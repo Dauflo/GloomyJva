@@ -14,7 +14,7 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = UpdateProfil.URL_PATH)
 public class UpdateProfil extends HttpServlet {
-    public static final String URL_PATH = "/auth/updateprofil";
+    public static final String URL_PATH = "/auth/gloomyauth/updateprofil";
     public static final String JSP_PATH = "/WEB-INF/auth/updateprofil.jsp";
     private UserDao userDao;
 
@@ -32,7 +32,6 @@ public class UpdateProfil extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //Get all fields from form
-        //TODO GOOGLE ACCOUNT
         String fName = req.getParameter("firstname");
         String lName = req.getParameter("lastname");
         String username = req.getParameter("username");

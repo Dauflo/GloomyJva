@@ -88,7 +88,7 @@ public class UserDao {
         User u;
         try {
             entityTransaction.begin();
-            Query query = entityManager.createQuery("SELECT u FROM User AS u WHERE u.email = :email AND u.password = :password");
+            Query query = entityManager.createQuery("SELECT u FROM User AS u WHERE u.email = :email AND u.password = :password AND u.googleFacebookUser = false");
             query.setParameter("email", email);
             query.setParameter("password", passwprd);
             try {

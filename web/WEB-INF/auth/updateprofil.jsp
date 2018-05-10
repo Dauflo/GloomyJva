@@ -12,7 +12,7 @@
     <title>Gloomy</title>
 </head>
 <body>
-<form method="post" action="/auth/updateprofil">
+<form method="post" action="/auth/gloomyauth/updateprofil">
     Prenom :<br>
     <input type="text" name="firstname" value="<c:out value="${user.getFirstname()}"></c:out>" required>
     <br>
@@ -24,6 +24,6 @@
     <br><br>
     <input type="submit" value="Update">
 </form>
-<a href="/auth/updatepassword">Update Password</a>
+<a href="/auth/gloomyauth/updatepassword">Update Password</a>
 </body>
 </html>
