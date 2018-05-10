@@ -22,11 +22,14 @@ public class User  implements Serializable {
     @Column(nullable = false)
     private String username;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String email;
 
     @Column(nullable = false)
     private String password;
+
+    @Column(nullable = false)
+    private boolean googleFacebookUser;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(
@@ -62,6 +65,14 @@ public class User  implements Serializable {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public boolean isGoogleFacebookUser() {
+        return googleFacebookUser;
+    }
+
+    public void setGoogleFacebookUser(boolean googleFacebookUser) {
+        this.googleFacebookUser = googleFacebookUser;
     }
 
     public String getFirstname() {
