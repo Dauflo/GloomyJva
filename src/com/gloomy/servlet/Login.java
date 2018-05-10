@@ -33,15 +33,15 @@ public class Login extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //Get form information
-        String username = req.getParameter("username");
+        String email = req.getParameter("email");
         String password = req.getParameter("password");
 
-        if (username.trim().isEmpty() || password.trim().isEmpty()) {
+        if (email.trim().isEmpty() || password.trim().isEmpty()) {
             resp.sendRedirect(Login.URL_PATH);
         } else {
             String hashPass = Hash.hashString(password);
 
-            User u = userDao.authenticateUser(username, hashPass);
+            User u = userDao.authenticateUser(email, hashPass);
 
             if (u != null) {
                 HttpSession session = req.getSession();

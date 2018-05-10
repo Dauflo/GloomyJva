@@ -58,6 +58,7 @@ public class Register extends HttpServlet {
 
                 user.setUsername(username);
                 user.setEmail(email);
+                user.setGoogleFacebookUser(false);
 
                 //Hash password
                 String hashPassword = Hash.hashString(password);
