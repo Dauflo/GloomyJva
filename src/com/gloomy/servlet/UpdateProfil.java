@@ -32,11 +32,12 @@ public class UpdateProfil extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //Get all fields from form
+        //TODO GOOGLE ACCOUNT
         String fName = req.getParameter("firstname");
         String lName = req.getParameter("lastname");
-        String email = req.getParameter("email");
+        String username = req.getParameter("username");
 
-        if (fName.trim().isEmpty() || lName.trim().isEmpty() || email.trim().isEmpty()) {
+        if (fName.trim().isEmpty() || lName.trim().isEmpty() || username.trim().isEmpty()) {
             resp.sendRedirect(UpdateProfil.URL_PATH);
         } else {
             HttpSession currentSession = req.getSession();
@@ -45,7 +46,7 @@ public class UpdateProfil extends HttpServlet {
 
             currentUser.setFirstname(fName);
             currentUser.setLastname(lName);
-            currentUser.setEmail(email);
+            currentUser.setUsername(username);
 
             userDao.updateUser(currentUser);
 

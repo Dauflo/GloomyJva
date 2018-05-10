@@ -19,8 +19,8 @@
     Nom :<br>
     <input type="text" name="lastname" value="<c:out value="${user.getLastname()}"></c:out>" required>
     <br>
-    Email :<br>
-    <input type="email" name="email" value="<c:out value="${user.getEmail()}"></c:out>" required>
+    Username :<br>
+    <input type="text" name="username" value="<c:out value="${user.getUsername()}"></c:out>" required>
     <br><br>
     <input type="submit" value="Update">
 </form>
