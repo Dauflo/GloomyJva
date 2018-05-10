@@ -13,7 +13,7 @@
 </head>
 <body>
 <div>
-    Main page<br><br>
+    Main page <c:out value="${user.getFirstname()}"></c:out><br><br>
     <%-- UPLOAD FILE --%>
     <form method="post" action="/auth/uploadfile" enctype="multipart/form-data">
         My file<br>
@@ -25,6 +25,7 @@
                 <option value="${directory.getId()}"><c:out value="${directory.getName()}"/></option>
             </c:forEach>
         </select><br>
+        <input type="hidden" value="0" name="currentDirID"/>
         <input type="submit" value="Upload">
     </form>
     <%-- ADD DIRECTORY --%>
@@ -32,10 +33,13 @@
         Directory:<br>
         <input type="text" name="directory" required>
         <br><br>
+        <input type="hidden" value="0" name="rootDirId">
         <input type="submit" value="Add directory">
     </form>
     <a href="/logout">Logout</a>
-    <a href="/auth/updateprofil">Update Profil</a><br>
+    <c:if test="${!user.isGoogleFacebookUser()}">
+        <a href="/auth/updateprofil">Update Profil</a><br>
+    </c:if>
     <%-- DISPLAY FILE --%>
     <table>
         <c:forEach items="${files}" var="file">
