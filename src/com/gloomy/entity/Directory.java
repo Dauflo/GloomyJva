@@ -97,4 +97,8 @@ public class Directory implements Serializable{
     public void setShared(boolean shared) {
         this.shared = shared;
     }
+
+    public String getSharedString() {
+        return ((shared) ? "Unshare" : "Share");
+    }
 }

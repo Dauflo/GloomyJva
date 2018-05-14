@@ -12,7 +12,12 @@
     <title>Gloomy</title>
 </head>
 <body>
-    <h1><c:out value="${directory.getName()}"/></h1>
+    <h1><c:out value="${directory.getName()}"/></h1><br>
+    <%-- Share unshare dir --%>
+    <form action="/auth/shareunsharedir" method="post">
+        <input type="hidden" value="${directory.getId()}" name="id"/>
+        <input type="submit" value="${directory.getSharedString()}"/>
+    </form><br>
     <%-- UPLOAD FILE --%>
     <form method="post" action="/auth/uploadfile" enctype="multipart/form-data">
         My file<br>
