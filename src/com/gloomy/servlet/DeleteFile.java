@@ -2,6 +2,7 @@ package com.gloomy.servlet;
 
 import com.gloomy.dao.FileDao;
 import com.gloomy.entity.FileUser;
+import com.gloomy.entity.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -32,11 +33,14 @@ public class DeleteFile extends HttpServlet {
 
         FileUser fileUser = fileDao.readById(fileId);
 
-        fileDao.deleteFile(fileUser);
+        HttpSession session = req.getSession();
+        User currentUser = (User) session.getAttribute("user");
+
+        fileDao.deleteFile(currentUser, fileUser);
 
         try {
             long currentDirId = Long.parseLong(req.getParameter("currentDirID"));
-            HttpSession session = req.getSession();
+            session = req.getSession();
             session.setAttribute("currentDirId", currentDirId);
             resp.sendRedirect(DirectoryDetail.URL_PATH);
         } catch (Exception e) {

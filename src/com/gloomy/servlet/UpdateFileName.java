@@ -2,12 +2,14 @@ package com.gloomy.servlet;
 
 import com.gloomy.dao.FileDao;
 import com.gloomy.entity.FileUser;
+import com.gloomy.entity.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.regex.Pattern;
 
@@ -38,7 +40,10 @@ public class UpdateFileName extends HttpServlet {
 
                 fileUser.setName(newName + "." + fileUser.getName().split(Pattern.quote("."))[1]);
 
-                fileDao.updateNameFile(fileUser);
+                HttpSession session = req.getSession();
+                User currentUser = (User) session.getAttribute("user");
+
+                fileDao.updateNameFile(currentUser, fileUser);
                 resp.sendRedirect(Main.URL_PATH);
             }
         }
