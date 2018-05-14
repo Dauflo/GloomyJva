@@ -45,7 +45,7 @@ public class AddDirectory extends HttpServlet{
             directory.setRootDirId(rootDirId);
             directory.setShared(false);
             directory.setShareLink(Hash.getSaltString());
-            directoryDao.addCDirectory(directory);
+            directoryDao.addDirectory(directory);
 
             resp.sendRedirect(Main.URL_PATH);
         }
