@@ -24,6 +24,7 @@ public class UploadFile extends HttpServlet {
     public static final String URL_PATH = "/auth/uploadfile";
     private UserDao userDao;
     private DirectoryDao directoryDao;
+    private long maxSize = 30000000000L;
 
     @Override
     public void init() throws ServletException {
@@ -68,11 +69,23 @@ public class UploadFile extends HttpServlet {
             fileUser.setSize(size);
             fileUser.setUser(currentUser);
 
-            if (directoryId != 0) {
-                Directory directory = directoryDao.getDirectoryById(directoryId);
-                fileUser.setDirectory(directory);
+            //get total size
+            long totalSize = fileDao.totalSize(currentUser);
+
+            totalSize += size;
+
+            System.out.println(totalSize);
+
+            if (totalSize <= maxSize) {
+                if (directoryId != 0) {
+                    Directory directory = directoryDao.getDirectoryById(directoryId);
+                    fileUser.setDirectory(directory);
+                }
+                fileDao.persist(fileUser);
+            } else {
+                //TODO change message (popup...)
+                System.out.println("max");
             }
-            fileDao.persist(fileUser);
         }
 
         if (currentDirId == 0) {

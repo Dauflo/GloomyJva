@@ -128,5 +128,30 @@ public class FileDao {
         }
         return fileUserList;
     }
+
+    //Get total size
+    public long totalSize(User user) {
+        long totalSize = 0;
+        List<Long> sizes;
+        EntityManager entityManager = gloomy_emf.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        try {
+            entityTransaction.begin();
+            Query query = entityManager.createQuery("SELECT f.size FROM FileUser AS f WHERE f.user = :user");
+            query.setParameter("user", user);
+            sizes = query.getResultList();
+            entityTransaction.commit();
+        } finally {
+            if (entityTransaction.isActive()) {
+                entityTransaction.rollback();
+            }
+            entityManager.close();
+        }
+
+        for (long size : sizes) {
+            totalSize += size;
+        }
+        return totalSize;
+    }
 }
 
