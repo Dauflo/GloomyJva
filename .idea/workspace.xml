@@ -2,57 +2,14 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="GloomyJva:war exploded" />
+      <artifact name="GloomyJva:Web exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a45b4ef-1d63-43bc-b146-4e608a3e70ec" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/gloomy/rest/ressource.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/GloomyJva.iml" afterPath="$PROJECT_DIR$/GloomyJva.iml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/META-INF/persistence.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/com/gloomy/dao/UserDao.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/com/gloomy/entity/User.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/com/gloomy/servlet/Login.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/com/gloomy/servlet/Logout.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/com/gloomy/servlet/Register.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/com/gloomy/util/GloomyInitializer.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/com/gloomy/util/Hash.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/com/gloomy/util/PersistenceManager.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/antlr-2.7.6.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/asm-3.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/commons-collections-3.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/commons-logging-1.1.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/commons-logging-adapters-1.1.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/commons-logging-api-1.1.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/dom4j-1.6.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/hibernate-jpa-2.0-api-1.0.0.Final.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/hibernate3.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/jackson-core-asl-1.9.13.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/javassist-3.12.0.GA.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/javax.annotation.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/javax.ejb.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/javax.jms.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/javax.resource.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/javax.servlet.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/javax.servlet.jsp.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/jaxb-api-2.2.3.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/jaxb-impl-2.0.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/jersey-bundle-1.18.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/jstl-api-1.2.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/jstl-impl-1.2.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/jta-1.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/mysql-connector-java-5.1.13-bin.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/slf4j-api-1.6.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/slf4j-jdk14-1.6.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/login.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/register.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/web.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/index.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/dao/UserDao.class" afterPath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/dao/UserDao.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/entity/User.class" afterPath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/entity/User.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/servlet/Login.class" afterPath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/servlet/Login.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/servlet/Register.class" afterPath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/servlet/Register.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/util/Hash.class" afterPath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/util/Hash.class" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -86,11 +43,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
-              <caret line="49" column="47" lean-forward="false" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="47" />
+            <state relative-caret-position="105">
+              <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ressource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/gloomy/rest/ressource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#308#309#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="18" column="55" lean-forward="true" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -150,6 +130,9 @@
         <option value="$PROJECT_DIR$/src/com/gloomy/dao/FileDao.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/auth/directory.jsp" />
         <option value="$PROJECT_DIR$/src/com/gloomy/servlet/DeleteFile.java" />
+        <option value="$PROJECT_DIR$/src/com/gloomy/rest.java" />
+        <option value="$PROJECT_DIR$/src/com/gloomy/rest/ressource.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
       </list>
     </option>
   </component>
@@ -198,6 +181,11 @@
             <path>
               <item name="GloomyJva" type="b2602c69:ProjectViewProjectNode" />
               <item name="GloomyJva" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GloomyJva" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GloomyJva" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -210,8 +198,7 @@
               <item name="GloomyJva" type="b2602c69:ProjectViewProjectNode" />
               <item name="GloomyJva" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="gloomy" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GloomyJva" type="b2602c69:ProjectViewProjectNode" />
@@ -238,7 +225,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -261,7 +248,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.8">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.29">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -338,10 +325,10 @@
       <listeners />
     </configuration>
     <configuration name="Tomcat 8.5.29" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.29" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
-      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <option name="BROWSER_ID" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="GloomyJva:war exploded">
+        <artifact name="GloomyJva:Web exploded">
           <settings>
             <option name="CONTEXT_PATH" value="/" />
           </settings>
@@ -349,7 +336,6 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Tomcat_8_5_29_GloomyJva" />
-        <option name="HTTP_PORT" value="8080" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -408,6 +394,7 @@
       <method>
         <option name="BuildArtifacts" enabled="true">
           <artifact name="GloomyJva:war exploded" />
+          <artifact name="GloomyJva:Web exploded" />
         </option>
       </method>
     </configuration>
@@ -504,12 +491,12 @@
       <workItem from="1525518915381" duration="3063000" />
       <workItem from="1525549186770" duration="200000" />
       <workItem from="1525597171228" duration="24725000" />
-      <workItem from="1526289391563" duration="580000" />
+      <workItem from="1526289391563" duration="1934000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69546000" />
+    <option name="totallyTimeSpent" value="70900000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -522,7 +509,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
@@ -541,11 +527,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.325" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17717391" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1684435" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1684435" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
@@ -570,26 +556,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/gloomy/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/UpdatePassword.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="55" column="20" lean-forward="false" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gloomy/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
@@ -974,14 +940,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/auth/main.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1260">
@@ -1000,8 +958,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="49" column="47" lean-forward="false" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="47" />
+        <state relative-caret-position="105">
+          <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gloomy/rest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gloomy/rest/ressource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#308#309#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="55" lean-forward="true" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
           <folding />
         </state>
       </provider>
@@ -1060,11 +1045,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Web|GloomyJva</last-edited>
+          <last-edited>GloomyJva</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
