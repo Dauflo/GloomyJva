@@ -30,5 +30,20 @@
         </tr>
     </c:forEach>
 </table><br>
+<%-- DISPLAY DIRECTORY --%>
+<table>
+    <c:forEach items="${directories}" var="subDirectory">
+        <tr>
+            <td><c:out value="${subDirectory.getName()}"/></td>
+            <td>
+                    <%-- CHANGE ACTION --%>
+                <form method="post" action="/auth/sharesubdirdetail">
+                    <input type="hidden" value="${subDirectory.getId()}" name="id">
+                    <input type="submit" value="See">
+                </form>
+            </td>
+        </tr>
+    </c:forEach>
+</table><br>
 </body>
 </html>

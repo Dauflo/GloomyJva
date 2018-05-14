@@ -44,6 +44,12 @@ public class ShareDirectory extends HttpServlet {
 
             req.setAttribute("directory", directory);
 
+            if (directory.getId() != 0) {
+                List<Directory> directoryList = directoryDao.getAllSubDirectory(directory.getId());
+
+                req.setAttribute("directories", directoryList);
+            }
+
             RequestDispatcher rd = req.getRequestDispatcher(ShareDirectory.JSP_PATH);
             rd.forward(req, resp);
         }

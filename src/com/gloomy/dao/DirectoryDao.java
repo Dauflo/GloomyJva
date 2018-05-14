@@ -104,14 +104,14 @@ public class DirectoryDao {
     }
 
     //Get all sub dir
-    public List<Directory> getAllSubDirectory(User user, long dirId) {
+    public List<Directory> getAllSubDirectory(long dirId) {
         List<Directory> directoryList;
         EntityManager entityManager = gloomy_emf.createEntityManager();
         EntityTransaction entityTransaction = entityManager.getTransaction();
         try {
             entityTransaction.begin();
-            Query query = entityManager.createQuery("SELECT d FROM Directory AS d WHERE d.user = :user AND d.rootDirId = :rootDirId ORDER BY d.id");
-            query.setParameter("user", user);
+            Query query = entityManager.createQuery("SELECT d FROM Directory AS d WHERE d.rootDirId = :rootDirId ORDER BY d.id");
+            //query.setParameter("user", user);
             query.setParameter("rootDirId", dirId);
             directoryList = query.getResultList();
             entityTransaction.commit();
