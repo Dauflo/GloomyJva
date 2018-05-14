@@ -12,8 +12,8 @@
 </head>
 <body>
 <form method="post" action="login">
-    Username:<br>
-    <input type="text" name="username" required>
+    Email:<br>
+    <input type="email" name="email" required>
     <br>
     Password:<br>
     <input type="password" name="password" required>
