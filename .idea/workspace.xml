@@ -8,13 +8,51 @@
   <component name="ChangeListManager">
     <list default="true" id="8a45b4ef-1d63-43bc-b146-4e608a3e70ec" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/com/gloomy/dao/FileDao.java" afterPath="$PROJECT_DIR$/src/com/gloomy/dao/FileDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/gloomy/servlet/DirectoryDetail.java" afterPath="$PROJECT_DIR$/src/com/gloomy/servlet/DirectoryDetail.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/gloomy/servlet/UpdateDirectoryName.java" afterPath="$PROJECT_DIR$/src/com/gloomy/servlet/UpdateDirectoryName.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/gloomy/servlet/UpdateFileName.java" afterPath="$PROJECT_DIR$/src/com/gloomy/servlet/UpdateFileName.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/gloomy/servlet/UploadFile.java" afterPath="$PROJECT_DIR$/src/com/gloomy/servlet/UploadFile.java" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/auth/directory.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/auth/directory.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/auth/main.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/auth/main.jsp" />
+      <change beforePath="$PROJECT_DIR$/GloomyJva.iml" afterPath="$PROJECT_DIR$/GloomyJva.iml" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/META-INF/persistence.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/com/gloomy/dao/UserDao.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/com/gloomy/entity/User.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/com/gloomy/servlet/Login.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/com/gloomy/servlet/Logout.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/com/gloomy/servlet/Register.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/com/gloomy/util/GloomyInitializer.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/com/gloomy/util/Hash.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/classes/com/gloomy/util/PersistenceManager.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/antlr-2.7.6.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/asm-3.1.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/commons-collections-3.1.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/commons-logging-1.1.1.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/commons-logging-adapters-1.1.1.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/commons-logging-api-1.1.1.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/dom4j-1.6.1.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/hibernate-jpa-2.0-api-1.0.0.Final.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/hibernate3.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/jackson-core-asl-1.9.13.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/javassist-3.12.0.GA.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/javax.annotation.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/javax.ejb.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/javax.jms.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/javax.resource.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/javax.servlet.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/javax.servlet.jsp.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/jaxb-api-2.2.3.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/jaxb-impl-2.0.1.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/jersey-bundle-1.18.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/jstl-api-1.2.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/jstl-impl-1.2.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/jta-1.1.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/mysql-connector-java-5.1.13-bin.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/slf4j-api-1.6.1.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/lib/slf4j-jdk14-1.6.1.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/login.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/register.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/WEB-INF/web.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GloomyJva_war_exploded/index.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/dao/UserDao.class" afterPath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/dao/UserDao.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/entity/User.class" afterPath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/entity/User.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/servlet/Login.class" afterPath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/servlet/Login.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/servlet/Register.class" afterPath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/servlet/Register.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/util/Hash.class" afterPath="$PROJECT_DIR$/out/production/GloomyJva/com/gloomy/util/Hash.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,85 +75,28 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="FileDao.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/gloomy/dao/FileDao.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="79">
-                  <caret line="80" column="39" lean-forward="true" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
-                  <folding>
-                    <element signature="e#499#500#0" expanded="true" />
-                    <element signature="e#572#573#0" expanded="true" />
-                    <element signature="e#2945#2955#0" expanded="true" />
-                    <element signature="e#3800#3810#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="UploadFile.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/UploadFile.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="450">
-                  <caret line="82" column="56" lean-forward="true" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="56" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="directory.jsp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/WEB-INF/auth/directory.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="389">
-                  <caret line="54" column="92" lean-forward="false" selection-start-line="54" selection-start-column="80" selection-end-line="54" selection-end-column="92" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/gloomy/dao/UserDao.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="134">
-                  <caret line="74" column="19" lean-forward="false" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="DeleteFile.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/DeleteFile.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="671">
-                  <caret line="41" column="31" lean-forward="true" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="main.jsp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/WEB-INF/auth/main.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="60" column="20" lean-forward="true" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="persistence.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="9" column="69" lean-forward="false" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Login.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/Login.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="798">
+              <caret line="49" column="47" lean-forward="false" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -206,8 +187,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -231,45 +211,11 @@
               <item name="GloomyJva" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="gloomy" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GloomyJva" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GloomyJva" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="gloomy" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GloomyJva" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GloomyJva" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="gloomy" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GloomyJva" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GloomyJva" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="gloomy" type="462c0819:PsiDirectoryNode" />
               <item name="servlet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GloomyJva" type="b2602c69:ProjectViewProjectNode" />
               <item name="GloomyJva" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="gloomy" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GloomyJva" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GloomyJva" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GloomyJva" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GloomyJva" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -277,20 +223,14 @@
               <item name="GloomyJva" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GloomyJva" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GloomyJva" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -298,10 +238,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Intellij/Supcommerce" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -321,7 +261,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.8">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -399,6 +339,7 @@
     </configuration>
     <configuration name="Tomcat 8.5.29" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.29" ALTERNATIVE_JRE_ENABLED="false">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="GloomyJva:war exploded">
           <settings>
@@ -408,6 +349,7 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Tomcat_8_5_29_GloomyJva" />
+        <option name="HTTP_PORT" value="8080" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -469,12 +411,77 @@
         </option>
       </method>
     </configuration>
+    <configuration name="Tomcat 9.0.8" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.8" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_GloomyJva" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="3575" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 8.5.29" />
+      <item index="1" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 9.0.8" />
+    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -497,11 +504,12 @@
       <workItem from="1525518915381" duration="3063000" />
       <workItem from="1525549186770" duration="200000" />
       <workItem from="1525597171228" duration="24725000" />
+      <workItem from="1526289391563" duration="580000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68966000" />
+    <option name="totallyTimeSpent" value="69546000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -533,13 +541,12 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.325" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.325" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16684435" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1684435" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -547,6 +554,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -562,20 +570,12 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gloomy/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -603,7 +603,7 @@
         <state relative-caret-position="680">
           <caret line="54" column="17" lean-forward="false" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -621,10 +621,8 @@
         <state relative-caret-position="68">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#572#573#0" expanded="true" />
-            <element signature="e#2945#2955#0" expanded="true" />
-            <element signature="e#3800#3810#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="false" />
+            <element signature="e#572#573#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -642,7 +640,7 @@
         <state relative-caret-position="782">
           <caret line="46" column="34" lean-forward="false" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -702,7 +700,7 @@
         <state relative-caret-position="1088">
           <caret line="64" column="26" lean-forward="false" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="26" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -720,18 +718,12 @@
         <state relative-caret-position="85">
           <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9bd2563a-8e3c-4996-941c-abb27e2e48b4/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9bd2563a-8e3c-4996-941c-abb27e2e48b4/console.sql" />
     <entry file="file://$PROJECT_DIR$/GloomyJva.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -829,7 +821,7 @@
         <state relative-caret-position="238">
           <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -839,17 +831,7 @@
         <state relative-caret-position="331">
           <caret line="42" column="17" lean-forward="false" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="49" column="47" lean-forward="false" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -858,14 +840,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -883,7 +857,7 @@
         <state relative-caret-position="136">
           <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#Directory#0;class#Directory#0" expanded="false" />
           </folding>
         </state>
@@ -902,7 +876,7 @@
         <state relative-caret-position="216">
           <caret line="33" column="67" lean-forward="false" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="67" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -920,7 +894,7 @@
         <state relative-caret-position="189">
           <caret line="30" column="36" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="36" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -930,7 +904,7 @@
         <state relative-caret-position="102">
           <caret line="33" column="47" lean-forward="true" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -940,14 +914,14 @@
         <state relative-caret-position="297">
           <caret line="30" column="36" lean-forward="false" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gloomy/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
+        <state relative-caret-position="1449">
           <caret line="74" column="19" lean-forward="false" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
           <folding />
         </state>
@@ -955,22 +929,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gloomy/dao/FileDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
+        <state relative-caret-position="1428">
           <caret line="80" column="39" lean-forward="true" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
           <folding>
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#572#573#0" expanded="true" />
-            <element signature="e#2945#2955#0" expanded="true" />
-            <element signature="e#3800#3810#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="false" />
+            <element signature="e#572#573#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/auth/main.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="60" column="20" lean-forward="true" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -984,7 +948,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/auth/directory.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
+        <state relative-caret-position="1134">
           <caret line="54" column="92" lean-forward="false" selection-start-line="54" selection-start-column="80" selection-end-line="54" selection-end-column="92" />
           <folding />
         </state>
@@ -995,7 +959,7 @@
         <state relative-caret-position="450">
           <caret line="82" column="56" lean-forward="true" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="56" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1005,8 +969,40 @@
         <state relative-caret-position="671">
           <caret line="41" column="31" lean-forward="true" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/auth/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="60" column="20" lean-forward="true" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="69" lean-forward="false" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gloomy/servlet/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="49" column="47" lean-forward="false" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1016,7 +1012,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>GloomyJva:war exploded</last-edited>
+          <last-edited>GloomyJva:Web exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1064,7 +1060,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>GloomyJva</last-edited>
+          <last-edited>Web|GloomyJva</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
