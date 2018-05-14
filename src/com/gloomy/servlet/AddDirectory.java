@@ -3,6 +3,7 @@ package com.gloomy.servlet;
 import com.gloomy.dao.DirectoryDao;
 import com.gloomy.entity.Directory;
 import com.gloomy.entity.User;
+import com.gloomy.util.Hash;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -42,6 +43,8 @@ public class AddDirectory extends HttpServlet{
             directory.setName(directoryName);
             directory.setUser(currentUser);
             directory.setRootDirId(rootDirId);
+            directory.setShared(false);
+            directory.setShareLink(Hash.getSaltString());
             directoryDao.addCDirectory(directory);
 
             resp.sendRedirect(Main.URL_PATH);

@@ -4,10 +4,7 @@ import com.gloomy.entity.Directory;
 import com.gloomy.entity.User;
 import com.gloomy.util.PersistenceManager;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Query;
+import javax.persistence.*;
 import java.util.List;
 
 public class DirectoryDao {
@@ -125,5 +122,29 @@ public class DirectoryDao {
             entityManager.close();
         }
         return directoryList;
+    }
+
+    //Get dir by share link
+    public Directory getDirByLink(String link) {
+        Directory directory;
+        EntityManager entityManager = gloomy_emf.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        try {
+            entityTransaction.begin();
+            Query query = entityManager.createQuery("SELECT d FROM Directory AS d WHERE d.shareLink = :link AND d.shared = true");
+            query.setParameter("link", link);
+            try {
+                directory = (Directory) query.getSingleResult();
+            } catch (NoResultException e) {
+                directory = null;
+            }
+            entityTransaction.commit();
+        } finally {
+            if (entityTransaction.isActive()) {
+                entityTransaction.rollback();
+            }
+            entityManager.close();
+        }
+        return directory;
     }
 }

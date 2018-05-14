@@ -14,6 +14,12 @@ public class Directory implements Serializable{
     @Column(nullable = false)
     private String name;
 
+    @Column(nullable = false)
+    private String shareLink;
+
+    @Column(nullable = false)
+    private boolean shared;
+
     @Column(nullable = true)
     private long rootDirId;
 
@@ -48,6 +54,14 @@ public class Directory implements Serializable{
         this.id = id;
     }
 
+    public String getShareLink() {
+        return shareLink;
+    }
+
+    public void setShareLink(String shareLink) {
+        this.shareLink = shareLink;
+    }
+
     public String getName() {
         return name;
     }
@@ -74,5 +88,13 @@ public class Directory implements Serializable{
 
     public void addFileUserList(FileUser fileUser) {
         this.fileUserList.add(fileUser);
+    }
+
+    public boolean isShared() {
+        return shared;
+    }
+
+    public void setShared(boolean shared) {
+        this.shared = shared;
     }
 }
