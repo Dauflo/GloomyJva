@@ -2,6 +2,7 @@ package com.gloomy.servlet;
 
 import com.gloomy.dao.UserDao;
 import com.gloomy.entity.User;
+import com.gloomy.rest.UserRessource;
 import com.gloomy.util.Hash;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken.Payload;
@@ -26,11 +27,11 @@ public class GoogleLogin extends HttpServlet{
 
     private static final JacksonFactory jacksonFactory = new JacksonFactory();
 
-    private UserDao userDao;
+    private UserRessource userRessource;
 
     @Override
     public void init() throws ServletException {
-        userDao = new UserDao();
+        userRessource = new UserRessource();
     }
 
     @Override
@@ -71,7 +72,7 @@ public class GoogleLogin extends HttpServlet{
             String givenName = (String) payload.get("given_name");
 
             //Get the user if exist
-            User currentUser = userDao.getGoogleFacebookUser(email);
+            User currentUser = userRessource.getGoogleFacebookUser(email);
             if (currentUser == null) {
                 //Create user
                 currentUser = new User();
@@ -82,8 +83,8 @@ public class GoogleLogin extends HttpServlet{
                 currentUser.setGoogleFacebookUser(true);
                 currentUser.setPassword(Hash.hashString(Hash.getSaltString()));
 
-                userDao.addUser(currentUser);
-                currentUser = userDao.getGoogleFacebookUser(email);
+                userRessource.createUser(currentUser);
+                currentUser = userRessource.getGoogleFacebookUser(email);
             }
             HttpSession session = req.getSession();
             session.setAttribute("user", currentUser);

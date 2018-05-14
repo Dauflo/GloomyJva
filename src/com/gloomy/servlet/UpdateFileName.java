@@ -2,6 +2,7 @@ package com.gloomy.servlet;
 
 import com.gloomy.dao.FileDao;
 import com.gloomy.entity.FileUser;
+import com.gloomy.rest.FileRessource;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,11 +15,12 @@ import java.util.regex.Pattern;
 @WebServlet(urlPatterns = UpdateFileName.URL_PATH)
 public class UpdateFileName extends HttpServlet {
     public static final String URL_PATH = "/auth/updatefilename";
-    private FileDao fileDao;
+
+    private FileRessource fileRessource;
 
     @Override
     public void init() throws ServletException {
-        fileDao = new FileDao();
+        fileRessource = new FileRessource();
     }
 
     @Override
@@ -35,11 +37,11 @@ public class UpdateFileName extends HttpServlet {
         if (!newName.trim().isEmpty()) {
             if(!newName.contains(".")) {
                 //New name with extension
-                FileUser fileUser = fileDao.readById(fileId);
+                FileUser fileUser = fileRessource.readByIdFile(fileId);
 
                 fileUser.setName(newName + "." + fileUser.getName().split(Pattern.quote("."))[1]);
 
-                fileDao.updateNameFile(fileUser);
+                fileRessource.updateNameFile(fileUser);
                 resp.sendRedirect(Main.URL_PATH);
             }
         }

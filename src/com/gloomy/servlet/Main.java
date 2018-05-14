@@ -5,6 +5,8 @@ import com.gloomy.dao.FileDao;
 import com.gloomy.entity.Directory;
 import com.gloomy.entity.FileUser;
 import com.gloomy.entity.User;
+import com.gloomy.rest.DirectoryRessource;
+import com.gloomy.rest.FileRessource;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -20,13 +22,14 @@ import java.util.List;
 public class Main extends HttpServlet {
     public static final String URL_PATH = "/auth/main";
     public static final String JSP_PATH = "/WEB-INF/auth/main.jsp";
-    private FileDao fileDao;
-    private DirectoryDao directoryDao;
+
+    private FileRessource fileRessource;
+    private DirectoryRessource directoryRessource;
 
     @Override
     public void init() throws ServletException {
-        fileDao = new FileDao();
-        directoryDao = new DirectoryDao();
+        fileRessource = new FileRessource();
+        directoryRessource = new DirectoryRessource();
     }
 
     @Override
@@ -34,10 +37,10 @@ public class Main extends HttpServlet {
         HttpSession session = req.getSession();
         User currentUser = (User) session.getAttribute("user");
 
-        List<FileUser> fileUserList = fileDao.getFileUserList(currentUser);
+        List<FileUser> fileUserList = fileRessource.getUserListFile(currentUser);
         req.setAttribute("files", fileUserList);
 
-        List<Directory> directoryList = directoryDao.getAllDirectoryRoot(currentUser);
+        List<Directory> directoryList = directoryRessource.getAllRootDirectory(currentUser);
         req.setAttribute("directories", directoryList);
 
         RequestDispatcher rd = req.getRequestDispatcher(Main.JSP_PATH);

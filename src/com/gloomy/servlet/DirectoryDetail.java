@@ -5,6 +5,8 @@ import com.gloomy.dao.FileDao;
 import com.gloomy.entity.Directory;
 import com.gloomy.entity.FileUser;
 import com.gloomy.entity.User;
+import com.gloomy.rest.DirectoryRessource;
+import com.gloomy.rest.FileRessource;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -20,13 +22,14 @@ import java.util.List;
 public class DirectoryDetail extends HttpServlet{
     public static final String URL_PATH = "/auth/directorydetail";
     public static final String JSP_PATH = "/WEB-INF/auth/directory.jsp";
-    private FileDao fileDao;
-    private DirectoryDao directoryDao;
+
+    private FileRessource fileRessource;
+    private DirectoryRessource directoryRessource;
 
     @Override
     public void init() throws ServletException {
-        fileDao = new FileDao();
-        directoryDao = new DirectoryDao();
+        fileRessource = new FileRessource();
+        directoryRessource = new DirectoryRessource();
     }
 
     @Override
@@ -42,16 +45,16 @@ public class DirectoryDetail extends HttpServlet{
             session.removeAttribute("currentDirId");
         }
 
-        Directory directory = directoryDao.getDirectoryById(id);
+        Directory directory = directoryRessource.getByIdDirectory(id);
 
         req.setAttribute("directory", directory);
 
-        List<FileUser> fileUserList = fileDao.getFileFromDir(currentUser, directory);
+        List<FileUser> fileUserList = fileRessource.getFromDirFile(currentUser, directory);
 
         req.setAttribute("files", fileUserList);
 
         if (directory.getId() != 0) {
-            List<Directory> directoryList = directoryDao.getAllSubDirectory(currentUser, directory.getId());
+            List<Directory> directoryList = directoryRessource.getAllSubDirectory(currentUser, directory.getId());
 
             req.setAttribute("directories", directoryList);
         }

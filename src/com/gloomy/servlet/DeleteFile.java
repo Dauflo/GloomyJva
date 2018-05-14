@@ -2,6 +2,7 @@ package com.gloomy.servlet;
 
 import com.gloomy.dao.FileDao;
 import com.gloomy.entity.FileUser;
+import com.gloomy.rest.FileRessource;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,11 +15,12 @@ import java.io.IOException;
 @WebServlet(urlPatterns = DeleteFile.URL_PATH)
 public class DeleteFile extends HttpServlet {
     public static final String URL_PATH = "/auth/deletefile";
-    private FileDao fileDao;
+
+    private FileRessource fileRessource;
 
     @Override
     public void init() throws ServletException {
-        fileDao = new FileDao();
+        fileRessource = new FileRessource();
     }
 
     @Override
@@ -30,9 +32,9 @@ public class DeleteFile extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         long fileId = Long.parseLong(req.getParameter("id"));
 
-        FileUser fileUser = fileDao.readById(fileId);
+        FileUser fileUser = fileRessource.readByIdFile(fileId);
 
-        fileDao.deleteFile(fileUser);
+        fileRessource.deleteFile(fileUser);
 
         try {
             long currentDirId = Long.parseLong(req.getParameter("currentDirID"));

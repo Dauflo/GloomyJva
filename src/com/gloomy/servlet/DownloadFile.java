@@ -2,6 +2,7 @@ package com.gloomy.servlet;
 
 import com.gloomy.dao.FileDao;
 import com.gloomy.entity.FileUser;
+import com.gloomy.rest.FileRessource;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -19,11 +20,12 @@ public class DownloadFile extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private static final int BUFFER_SIZE = 4096;
     public static final String URL_PATH = "/auth/downloadfile";
-    private FileDao fileDao;
+
+    private FileRessource fileRessource;
 
     @Override
     public void init() throws ServletException {
-        fileDao = new FileDao();
+        fileRessource = new FileRessource();
     }
 
     @Override
@@ -32,7 +34,7 @@ public class DownloadFile extends HttpServlet {
         long id = Long.parseLong(req.getParameter("id"));
 
         try {
-            FileUser fileUser = fileDao.readById(id);
+            FileUser fileUser = fileRessource.readByIdFile(id);
             InputStream inputStream = fileUser.getFilePart().getBinaryStream();
             int fileLength = inputStream.available();
 

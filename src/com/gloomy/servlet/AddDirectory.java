@@ -3,6 +3,7 @@ package com.gloomy.servlet;
 import com.gloomy.dao.DirectoryDao;
 import com.gloomy.entity.Directory;
 import com.gloomy.entity.User;
+import com.gloomy.rest.DirectoryRessource;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,11 +17,11 @@ import java.io.IOException;
 public class AddDirectory extends HttpServlet{
     public static final String URL_PATH = "/auth/addDirectory";
 
-    private DirectoryDao directoryDao;
+    private DirectoryRessource directoryRessource;
 
     @Override
     public void init() throws ServletException {
-        directoryDao = new DirectoryDao();
+        directoryRessource =  new DirectoryRessource();
     }
 
     @Override
@@ -42,7 +43,8 @@ public class AddDirectory extends HttpServlet{
             directory.setName(directoryName);
             directory.setUser(currentUser);
             directory.setRootDirId(rootDirId);
-            directoryDao.addCDirectory(directory);
+
+            directoryRessource.addDirectory(directory);
 
             resp.sendRedirect(Main.URL_PATH);
         }
