@@ -55,12 +55,16 @@ public class FileDao {
     }
 
     //Update
-    public boolean updateNameFile(FileUser fileUser) {
+    public boolean updateNameFile(User user, FileUser fileUser) {
         EntityManager entityManager = gloomy_emf.createEntityManager();
         EntityTransaction entityTransaction = entityManager.getTransaction();
         try {
             entityTransaction.begin();
-            entityManager.merge(fileUser);
+            Query query = entityManager.createQuery("UPDATE FileUser SET name = :name WHERE id = :fileId AND user = :user");
+            query.setParameter("name", fileUser.getName());
+            query.setParameter("fileId", fileUser.getId());
+            query.setParameter("user", user);
+            query.executeUpdate();
             entityTransaction.commit();
         } finally {
             if (entityTransaction.isActive()) {
@@ -72,12 +76,35 @@ public class FileDao {
     }
 
     //Delete
-    public boolean deleteFile(FileUser fileUser) {
+    public boolean deleteFile(User user, FileUser fileUser) {
         EntityManager entityManager = gloomy_emf.createEntityManager();
         EntityTransaction entityTransaction = entityManager.getTransaction();
         try {
             entityTransaction.begin();
-            entityManager.remove(entityManager.merge(fileUser));
+            Query query = entityManager.createQuery("DELETE FROM FileUser AS f WHERE f.id = :id AND f.user = :user");
+            query.setParameter("id", fileUser.getId());
+            query.setParameter("user", user);
+            query.executeUpdate();
+            entityTransaction.commit();
+        } finally {
+            if (entityTransaction.isActive()) {
+                entityTransaction.rollback();
+            }
+            entityManager.close();
+        }
+        return true;
+    }
+
+    //Delete all files from dir
+    public boolean deleteAllFilesFromDir(User user, Directory directory) {
+        EntityManager entityManager = gloomy_emf.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        try {
+            entityTransaction.begin();
+            Query query = entityManager.createQuery("DELETE FROM FileUser AS f WHERE f.user = :user AND f.directory = :directory");
+            query.setParameter("user", user);
+            query.setParameter("directory", directory);
+            query.executeUpdate();
             entityTransaction.commit();
         } finally {
             if (entityTransaction.isActive()) {
@@ -109,6 +136,25 @@ public class FileDao {
     }
 
     //Get file from dir
+    public List<FileUser> getFileFromDir(Directory directory) {
+        List<FileUser> fileUserList = new ArrayList<FileUser>();
+        EntityManager entityManager = gloomy_emf.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        try {
+            entityTransaction.begin();
+            Query query = entityManager.createQuery("SELECT f FROM FileUser AS f WHERE f.directory = :directory ORDER BY f.id");
+            query.setParameter("directory", directory);
+            fileUserList = query.getResultList();
+            entityTransaction.commit();
+        } finally {
+            if(entityTransaction.isActive()) {
+                entityTransaction.rollback();
+            }
+            entityManager.close();
+        }
+        return fileUserList;
+    }
+
     public List<FileUser> getFileFromDir(User user, Directory directory) {
         List<FileUser> fileUserList = new ArrayList<FileUser>();
         EntityManager entityManager = gloomy_emf.createEntityManager();
