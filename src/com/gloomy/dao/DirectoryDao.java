@@ -16,7 +16,7 @@ public class DirectoryDao {
     }
 
     //Persist
-    public void addCDirectory(Directory directory) {
+    public void addDirectory(Directory directory) {
         EntityManager entityManager = gloomy_emf.createEntityManager();
         EntityTransaction entityTransaction = entityManager.getTransaction();
         try {
