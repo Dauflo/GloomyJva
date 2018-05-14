@@ -82,6 +82,12 @@
                         <input type="submit" value="See">
                     </form>
                 </td>
+                <td>
+                    <form method="post" action="/auth/deletedir">
+                        <input type="hidden" value="${directory.getId()}" name="id">
+                        <input type="submit" value="Delete">
+                    </form>
+                </td>
             </tr>
         </c:forEach>
     </table>

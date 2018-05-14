@@ -95,6 +95,26 @@ public class FileDao {
         return true;
     }
 
+    //Delete all files from dir
+    public boolean deleteAllFilesFromDir(User user, Directory directory) {
+        EntityManager entityManager = gloomy_emf.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        try {
+            entityTransaction.begin();
+            Query query = entityManager.createQuery("DELETE FROM FileUser AS f WHERE f.user = :user AND f.directory = :directory");
+            query.setParameter("user", user);
+            query.setParameter("directory", directory);
+            query.executeUpdate();
+            entityTransaction.commit();
+        } finally {
+            if (entityTransaction.isActive()) {
+                entityTransaction.rollback();
+            }
+            entityManager.close();
+        }
+        return true;
+    }
+
     //Give 10 first
     public List<FileUser> getFileUserList(User user) {
         List<FileUser> fileUserList = new ArrayList<FileUser>();

@@ -72,7 +72,7 @@ public class DirectoryDao {
         EntityTransaction entityTransaction = entityManager.getTransaction();
         try {
             entityTransaction.begin();
-            entityManager.remove(directory);
+            entityManager.remove(entityManager.merge(directory));
             entityTransaction.commit();
         } finally {
             if (entityTransaction.isActive()) {
