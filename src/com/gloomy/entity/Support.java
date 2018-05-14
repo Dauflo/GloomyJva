@@ -3,6 +3,7 @@ package com.gloomy.entity;
 
 import javax.persistence.*;
 
+//TODO: Generated at
 @Entity
 @Table(name = "support")
 public class Support {

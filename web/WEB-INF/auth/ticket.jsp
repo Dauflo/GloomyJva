@@ -5,9 +5,9 @@
     <title>Add Ticket</title>
 </head>
 <body>
-    <form action="/auth/addTicket" method="post">
-        <input type="text" name="title">
-        <textarea name="content" cols="30" rows="10"></textarea>
+    <form action="<%= application.getContextPath() %>" method="post">
+        <input type="text" name="title" value="${title}">
+        <textarea name="content" cols="30" rows="10">${content}</textarea>
         <input type="submit" value="Submit">
     </form>
 
