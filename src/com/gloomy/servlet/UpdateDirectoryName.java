@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet(urlPatterns = UpdateDirectoryName.URL_PATH)
@@ -27,7 +28,6 @@ public class UpdateDirectoryName extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //TODO same than upload file
         long directoryId = Long.parseLong(req.getParameter("directoryId"));
         String newName = req.getParameter("name");
 
@@ -35,6 +35,12 @@ public class UpdateDirectoryName extends HttpServlet {
         directory.setName(newName);
         directoryDao.updateDirectory(directory);
 
-        resp.sendRedirect(Main.URL_PATH);
+        if (directory.getId() == 0) {
+            resp.sendRedirect(Main.URL_PATH);
+        } else {
+            HttpSession session = req.getSession();
+            session.setAttribute("currentDirId", directory.getId() );
+            resp.sendRedirect(DirectoryDetail.URL_PATH);
+        }
     }
 }

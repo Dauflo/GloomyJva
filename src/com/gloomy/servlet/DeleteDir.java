@@ -41,9 +41,18 @@ public class DeleteDir extends HttpServlet {
         long id = Long.parseLong(req.getParameter("id"));
         Directory deleteDir = directoryDao.getDirectoryById(id);
 
+        long rootDirId = deleteDir.getRootDirId();
+
         deleteAll(deleteDir);
 
-        resp.sendRedirect(Main.URL_PATH);
+        //resp.sendRedirect(Main.URL_PATH);
+
+        if (rootDirId == 0) {
+            resp.sendRedirect(Main.URL_PATH);
+        } else {
+            session.setAttribute("currentDirId", rootDirId);
+            resp.sendRedirect(DirectoryDetail.URL_PATH);
+        }
     }
 
     private void deleteAll(Directory directory) {
