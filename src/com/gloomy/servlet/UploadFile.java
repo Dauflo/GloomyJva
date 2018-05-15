@@ -5,7 +5,6 @@ import com.gloomy.dao.FileDao;
 import com.gloomy.entity.Directory;
 import com.gloomy.entity.FileUser;
 import com.gloomy.entity.User;
-import com.gloomy.rest.UserResource;
 import org.apache.commons.io.IOUtils;
 
 import javax.servlet.ServletException;
@@ -25,11 +24,9 @@ public class UploadFile extends HttpServlet {
     private DirectoryDao directoryDao;
     private long maxSize = 30000000000L;
 
-    private UserResource userResource;
 
     @Override
     public void init() throws ServletException {
-        userResource = new UserResource();
         directoryDao = new DirectoryDao();
 
     }
