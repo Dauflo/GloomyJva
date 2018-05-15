@@ -2,7 +2,6 @@ package com.gloomy.servlet;
 
 import com.gloomy.dao.DirectoryDao;
 import com.gloomy.dao.FileDao;
-import com.gloomy.dao.UserDao;
 import com.gloomy.entity.Directory;
 import com.gloomy.entity.FileUser;
 import com.gloomy.entity.User;
@@ -22,13 +21,12 @@ import java.sql.SQLException;
 @MultipartConfig(maxFileSize = 16177215)
 public class UploadFile extends HttpServlet {
     public static final String URL_PATH = "/auth/uploadfile";
-    private UserDao userDao;
     private DirectoryDao directoryDao;
     private long maxSize = 30000000000L;
 
+
     @Override
     public void init() throws ServletException {
-        userDao = new UserDao();
         directoryDao = new DirectoryDao();
 
     }
