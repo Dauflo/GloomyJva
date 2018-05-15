@@ -1,7 +1,7 @@
 package com.gloomy.servlet;
 
-import com.gloomy.dao.UserDao;
 import com.gloomy.entity.User;
+import com.gloomy.rest.UserResource;
 import com.gloomy.util.Hash;
 
 import javax.servlet.RequestDispatcher;
@@ -17,11 +17,11 @@ import java.io.IOException;
 public class UpdatePassword extends HttpServlet {
     public static final String URL_PATH = "/auth/gloomyauth/updatepassword";
     public static final String JSP_PATH = "/WEB-INF/auth/updatepassword.jsp";
-    private UserDao userDao;
+    private UserResource userResource;
 
     @Override
     public void init() throws ServletException {
-        userDao = new UserDao();
+        userResource = new UserResource();
     }
 
     @Override
@@ -47,7 +47,7 @@ public class UpdatePassword extends HttpServlet {
 
                 user.setPassword(hashPass);
 
-                userDao.updateUser(user);
+                userResource.updateInJson(user);
 
                 currentSession.removeAttribute("user");
                 currentSession.setAttribute("user", user);

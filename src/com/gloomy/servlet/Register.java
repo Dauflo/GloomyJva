@@ -1,7 +1,7 @@
 package com.gloomy.servlet;
 
-import com.gloomy.dao.UserDao;
 import com.gloomy.entity.User;
+import com.gloomy.rest.UserResource;
 import com.gloomy.util.Hash;
 
 import javax.servlet.RequestDispatcher;
@@ -17,11 +17,11 @@ public class Register extends HttpServlet {
     public static final String URL_PATH = "/register";
     public static final String JSP_PATH = "/WEB-INF/register.jsp";
 
-    private UserDao userDao;
+    private UserResource userResource;
 
     @Override
     public void init() throws ServletException {
-        userDao = new UserDao();
+        userResource = new UserResource();
     }
 
     @Override
@@ -67,7 +67,7 @@ public class Register extends HttpServlet {
 
 
                 //Save the user in DB
-                userDao.addUser(user);
+                userResource.saveInJson(user);
 
                 //Redirection
                 resp.sendRedirect(Login.URL_PATH);

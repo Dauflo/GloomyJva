@@ -1,7 +1,7 @@
 package com.gloomy.servlet;
 
-import com.gloomy.dao.UserDao;
 import com.gloomy.entity.User;
+import com.gloomy.rest.UserResource;
 import com.gloomy.util.Hash;
 
 import javax.servlet.RequestDispatcher;
@@ -17,11 +17,11 @@ import java.io.IOException;
 public class Login extends HttpServlet {
     public static final String URL_PATH = "/login";
     public static final String JSP_PATH = "/WEB-INF/login.jsp";
-    private UserDao userDao;
+    private UserResource userResource;
 
     @Override
     public void init() throws ServletException {
-        userDao = new UserDao();
+        userResource = new UserResource();
     }
 
     @Override
@@ -41,7 +41,7 @@ public class Login extends HttpServlet {
         } else {
             String hashPass = Hash.hashString(password);
 
-            User u = userDao.authenticateUser(email, hashPass);
+            User u = userResource.autentificateUserInJson(email, hashPass);
 
             if (u != null) {
                 HttpSession session = req.getSession();
