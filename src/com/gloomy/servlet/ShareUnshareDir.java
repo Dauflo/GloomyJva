@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet(urlPatterns = ShareUnshareDir.URL_PATH)
@@ -39,6 +40,9 @@ public class ShareUnshareDir extends HttpServlet {
 
         directoryDao.updateDirectory(directory);
 
-        resp.sendRedirect(Main.URL_PATH);
+        HttpSession session = req.getSession();
+        session.setAttribute("currentDirId", directory.getId());
+        resp.sendRedirect(DirectoryDetail.URL_PATH);
+
     }
 }
