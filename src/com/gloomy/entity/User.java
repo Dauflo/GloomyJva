@@ -31,7 +31,7 @@ public class User  implements Serializable {
     @Column(nullable = false)
     private boolean googleFacebookUser;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(
             name = "user_file",
             joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
@@ -39,7 +39,7 @@ public class User  implements Serializable {
     )
     private List<FileUser> fileUserList;
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "user_directory",
             joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
