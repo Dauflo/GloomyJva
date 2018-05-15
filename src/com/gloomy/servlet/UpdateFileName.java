@@ -44,7 +44,13 @@ public class UpdateFileName extends HttpServlet {
                 User currentUser = (User) session.getAttribute("user");
 
                 fileDao.updateNameFile(currentUser, fileUser);
-                resp.sendRedirect(Main.URL_PATH);
+
+                if (fileUser.getDirectory().getId() == 0) {
+                    resp.sendRedirect(Main.URL_PATH);
+                } else {
+                    session.setAttribute("currentDirId", fileUser.getDirectory().getId());
+                    resp.sendRedirect(DirectoryDetail.URL_PATH);
+                }
             }
         }
     }
