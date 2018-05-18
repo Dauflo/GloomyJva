@@ -46,6 +46,11 @@ public class DirectoryDetail extends HttpServlet{
 
         req.setAttribute("directory", directory);
 
+        //Get path
+        String path = getPath(directory.getRootDirId(), directory.getName());
+
+        req.setAttribute("path", path);
+
         List<FileUser> fileUserList = fileDao.getFileFromDir(currentUser, directory);
 
         req.setAttribute("files", fileUserList);
@@ -63,5 +68,14 @@ public class DirectoryDetail extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doGet(req, resp);
+    }
+
+    private String getPath(long rootId, String fullPath) {
+        if (rootId == 0) {
+            return fullPath + ">";
+        } else {
+            Directory currentDir = directoryDao.getDirectoryById(rootId);
+            return getPath(currentDir.getRootDirId(), currentDir.getName() + ">" + fullPath);
+        }
     }
 }
