@@ -45,7 +45,15 @@ public class UpdateFileName extends HttpServlet {
 
                 fileDao.updateNameFile(currentUser, fileUser);
 
-                if (fileUser.getDirectory().getId() == 0) {
+
+                long currentDirId;
+                try {
+                    currentDirId = fileUser.getDirectory().getId();
+                } catch (NullPointerException e) {
+                    currentDirId = 0;
+                }
+
+                if (currentDirId == 0) {
                     resp.sendRedirect(Main.URL_PATH);
                 } else {
                     session.setAttribute("currentDirId", fileUser.getDirectory().getId());
