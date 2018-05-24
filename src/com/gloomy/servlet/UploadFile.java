@@ -18,7 +18,7 @@ import java.sql.Blob;
 import java.sql.SQLException;
 
 @WebServlet(urlPatterns = UploadFile.URL_PATH)
-@MultipartConfig(maxFileSize = 16177215)
+@MultipartConfig(maxFileSize = 1000000000) // 16177215 46177215
 public class UploadFile extends HttpServlet {
     public static final String URL_PATH = "/auth/uploadfile";
     private DirectoryDao directoryDao;
