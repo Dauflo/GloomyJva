@@ -19,7 +19,7 @@ Création d'un utilisateur avec les propriétés suivantes :
   * Mot de passe
   * Confirmation du mot de passe
   
-Le "login" va chercher si l'utilisateur exite en base de donnée, si oui, un attribut de session et créé, sinon, on revoie sur la page de login.
+Le "login" va chercher si l'utilisateur éxiste en base de donnée, si oui, un attribut de session et créé, sinon, on revoie sur la page de login.
 Le "logout" détruit la variable de session utlisateur.
 
 ## II/ Google login
