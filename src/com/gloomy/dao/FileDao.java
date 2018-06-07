@@ -12,7 +12,6 @@ import javax.persistence.Query;
 import java.util.ArrayList;
 import java.util.List;
 
-//TODO interface
 public class FileDao {
     private final EntityManagerFactory gloomy_emf;
 

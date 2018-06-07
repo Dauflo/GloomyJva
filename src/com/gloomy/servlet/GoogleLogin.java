@@ -22,7 +22,6 @@ import java.util.Collections;
 @WebServlet(urlPatterns = GoogleLogin.URL_PATH)
 public class GoogleLogin extends HttpServlet{
     public static final String URL_PATH = "/googleconnection/login";
-    public static final String JSP_PATH = "/googleconnection/test.jsp";
 
     private static final JacksonFactory jacksonFactory = new JacksonFactory();
 

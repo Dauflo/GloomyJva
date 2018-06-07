@@ -18,6 +18,7 @@ import java.util.List;
 public class ShareDirectory extends HttpServlet {
     public static final String URL_PATH = "/auth/sharefolder";
     public static final String JSP_PATH = "/WEB-INF/auth/shareDir.jsp";
+    public static final String JSP_PATH_NOT_SHARED = "/WEB-INF/auth/notSharedDir.jsp";
     private DirectoryDao directoryDao;
     private FileDao fileDao;
 
@@ -34,7 +35,8 @@ public class ShareDirectory extends HttpServlet {
         Directory directory = directoryDao.getDirByLink(link);
 
         if (directory == null) {
-            //TODO 404
+            RequestDispatcher rd = req.getRequestDispatcher(ShareDirectory.JSP_PATH_NOT_SHARED);
+            rd.forward(req, resp);
             System.out.println("Bad");
         } else {
             System.out.println("Good");

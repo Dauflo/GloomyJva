@@ -41,7 +41,6 @@ public class Register extends HttpServlet {
         String email = req.getParameter("email");
 
         //Check if the fields are empty
-        //TODO keep good field
         if (fName.trim().isEmpty() || lName.trim().isEmpty() || username.trim().isEmpty()
                 || password.trim().isEmpty() || email.trim().isEmpty()) {
             resp.sendRedirect(Register.URL_PATH);
@@ -61,7 +60,7 @@ public class Register extends HttpServlet {
                 user.setGoogleFacebookUser(false);
 
                 //Hash password
-                String hashPassword = Hash.hashString(password);
+                String hashPassword = Hash.hashString(password + email);
                 user.setPassword(hashPassword);
 
 
