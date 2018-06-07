@@ -72,8 +72,6 @@ public class UploadFile extends HttpServlet {
 
             totalSize += size;
 
-            System.out.println(totalSize);
-
             if (totalSize <= maxSize) {
                 if (directoryId != 0) {
                     Directory directory = directoryDao.getDirectoryById(directoryId);
@@ -81,7 +79,6 @@ public class UploadFile extends HttpServlet {
                 }
                 fileDao.persist(fileUser);
             } else {
-                //TODO change message (popup...)
                 System.out.println("max");
             }
         }

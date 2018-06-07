@@ -39,17 +39,15 @@ public class Login extends HttpServlet {
         if (email.trim().isEmpty() || password.trim().isEmpty()) {
             resp.sendRedirect(Login.URL_PATH);
         } else {
-            String hashPass = Hash.hashString(password);
+            String hashPass = Hash.hashString(password + email);
 
             User u = userDao.authenticateUser(email, hashPass);
 
             if (u != null) {
                 HttpSession session = req.getSession();
                 session.setAttribute("user", u);
-                System.out.println("Login OK");
                 resp.sendRedirect(Main.URL_PATH);
             } else {
-                System.out.println("Fail to login");
                 resp.sendRedirect(Login.URL_PATH);
             }
         }

@@ -46,6 +46,11 @@ public class DirectoryDetail extends HttpServlet{
 
         req.setAttribute("directory", directory);
 
+        //Get shared
+        if (directory.isShared()) {
+            req.setAttribute("shareUrl", "http://localhost:8080/auth/sharefolder?link="+directory.getShareLink());
+        }
+
         //Get path
         String path = getPath(directory.getRootDirId(), directory.getName());
 
@@ -72,10 +77,10 @@ public class DirectoryDetail extends HttpServlet{
 
     private String getPath(long rootId, String fullPath) {
         if (rootId == 0) {
-            return fullPath + ">";
+            return fullPath + " >";
         } else {
             Directory currentDir = directoryDao.getDirectoryById(rootId);
-            return getPath(currentDir.getRootDirId(), currentDir.getName() + ">" + fullPath);
+            return getPath(currentDir.getRootDirId(), currentDir.getName() + " > " + fullPath);
         }
     }
 }
